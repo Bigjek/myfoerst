@@ -1,0 +1,18 @@
+header.header
+    .container
+        .header__top
+            ul.social
+                each i in social
+                    +svg(i.url, i.name)
+            .menu
+                a.menu__link(href="#") 
+                    include ../../img/icons/hamburger.svg
+        .header__block
+            .header__content
+                .header__content-img
+                    img(src="", alt="")
+                .header__content-title Евгений Кочешков
+                    p Личный сайт веб разработчика
+                .header__content-down
+                    a.down-link
+        

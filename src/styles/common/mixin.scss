@@ -1,0 +1,33 @@
+@mixin roboto($style : r){
+    @if $style == r {
+        font-family: 'Roboto-Regular';
+    }
+    @if $style == b {
+        font-family: 'Roboto-Bold';
+    }
+    @if $style == bi {
+        font-family: 'Roboto-BoldItalic';
+    }
+    @if $style == i {
+        font-family: 'Roboto-Italic';
+    }
+    @if $style == l {
+        font-family: 'Roboto-Light';
+    }
+    @if $style == m {
+        font-family: 'Roboto-Medium';
+    }
+    @if $style == li {
+        font-family: 'Roboto-LightItalic';
+    }
+}
+@mixin sansus($style : w){
+    @if $style == w {
+        font-family: 'SansusWebissimo';
+    }
+}
+@mixin font($style : a){
+    @if $style == a {
+        font-family: 'FontAwesome';
+    }
+}

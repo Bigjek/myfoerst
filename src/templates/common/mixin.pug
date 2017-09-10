@@ -1,0 +1,8 @@
+mixin navItemFooter(url, name, current)
+    li.footer-menu__item(class={active: current})
+        a.footer-menu__item-link(href=url)= name
+
+mixin svg(url, name)
+    li.social__items
+        a.social__link(href=url)
+            img(src=name)

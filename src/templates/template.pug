@@ -1,0 +1,22 @@
+include common/mixin.pug
+
+block variables
+- var nav = [{url:'/my-works.html',name:'Мои работы'},{ url:'/about.html',name:'Обо мне'},{ url:'/my-blog.html',name:'Блог'},{url:'/index.html' ,name:'Авторизация'}]
+- var social = [{url:'https://vk.com',name:'assets/img/icons/vk.svg'},{ url:'https://github.com/Bigjek',name:'assets/img/icons/github.svg'},{ url:'#',name:'assets/img/icons/in.svg'}]
+
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title #{title}
+    meta(content="" name="description")
+    meta(content="" name="keywords")
+    meta(content="width=device-width, initial-scale=1" name="viewport")
+    meta(content="ie=edge" http-equiv="x-ua-compatible")
+    link(rel='stylesheet' href='/assets/styles/main.min.css')
+    script(src='/assets/scripts/main.js' defer)
+
+  body
+    .wrapper
+      block content
+

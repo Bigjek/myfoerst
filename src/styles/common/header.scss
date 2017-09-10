@@ -1,0 +1,36 @@
+.header{
+    &__top{
+        padding: 28px;
+    }
+    &__block{
+        
+    }
+}
+.social{
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+    &__items{
+        display: inline-block;
+        padding: 0 14px;
+    }
+    &__link{
+        &:hover{
+            svg, path{
+                fill: $green-color;
+            }
+        }
+    }
+}
+.menu{
+    display: inline-block;
+    float: right;
+    &__link{
+        &:hover{
+            svg, path{
+                fill: $green-color;
+            }
+        }
+    }   
+}

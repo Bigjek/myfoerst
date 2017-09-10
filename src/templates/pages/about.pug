@@ -1,0 +1,10 @@
+extends ../template
+
+block variables
+  - var title = 'Обо мне'
+
+block content
+  .content
+    include ../common/header.pug
+    h1 #{title}
+  include ../common/footer.pug
