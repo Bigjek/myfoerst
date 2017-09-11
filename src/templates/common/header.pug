@@ -3,7 +3,7 @@ header.header
         .header__top
             ul.social
                 each i in social
-                    +svg(i.url, i.name)
+                    +svg(i.url, i.class_name, i.name)
             .menu
                 a.menu__link(href="#") 
                     include ../../img/icons/hamburger.svg

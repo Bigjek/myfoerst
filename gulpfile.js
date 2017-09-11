@@ -6,6 +6,10 @@ const notify = require("gulp-notify");
 const plumber = require('gulp-plumber');
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
+const svgSprite = require('gulp-svg-sprite');
+const svgmin = require('gulp-svgmin');
+const cheerio = require('gulp-cheerio');
+const replace = require('gulp-replace');
 
 // styles 
 const sass = require('gulp-sass');
@@ -39,6 +43,19 @@ const paths = {
     fonts: {
         src: 'src/fonts/**/*.*',
         dest: 'build/assets/fonts/'
+    },
+    svg:{
+        src: 'src/img/icons/**/*.svg',
+        dest: 'build/assets/img/'
+    }
+};
+
+//config svg sprite
+const config = {
+    mode: {
+        symbol: {
+            sprite: "../sprite.svg"
+        }
     }
 };
 
@@ -137,3 +154,27 @@ gulp.task('build', gulp.series(
     clean,
     gulp.parallel(styles, scripts, templates, images, fonts)
 ));
+
+gulp.task('sprite', function() {
+    return gulp.src(paths.svg.src)
+      .pipe(svgmin({
+        js2svg: {
+          pretty: true
+        }
+      }))
+      // удалить все атрибуты в svg
+      .pipe(cheerio({
+        run: function($) {
+          $('[fill]').removeAttr('fill');
+          $('[stroke]').removeAttr('stroke');
+          $('[style]').removeAttr('style');
+        },
+        parserOptions: {
+          xmlMode: true
+        }
+      }))
+      .pipe(replace('&gt;', '>'))
+      // build svg sprite
+      .pipe(svgSprite(config))
+      .pipe(gulp.dest(paths.svg.dest));
+  });

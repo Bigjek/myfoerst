@@ -16,6 +16,7 @@
         padding: 0 14px;
     }
     &__link{
+        vertical-align: middle;
         &:hover{
             svg, path{
                 fill: $green-color;
