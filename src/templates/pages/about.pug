@@ -6,5 +6,35 @@ block variables
 block content
   .content
     include ../common/header.pug
-    h1 #{title}
+    section.section.about
+      .about__left
+      .about__left-title
+        .block-title Обо мне
+      .about__left-content
+        .user-description
+          .user-description__image
+            img.user-description__avatar
+          .user-description__title
+            .block-subtitle Кто я
+          .user-description__text.text-content
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ipsum reprehenderit molestiae accusantium. Est adipisci, maiores, quaerat totam asperiores ipsam quasi.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis harum repellendus unde distinctio tempore natus quaerat praesentium necessitatibus.
+      .about__right
+        .about__right-title
+          .block-subtitle Чем я могу быть вам полезен
+        .about__right-text.text-content
+          p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+        .about__right-content
+          ul.skills-list
+            each item in ['Frontend', 'Backend', 'Workflow']
+              li.skills-list__item
+                .skills-row
+                  .skills-row__title #{item}
+                  ul.skills-row__list
+                    each skill in ['Html5', 'css3', 'JavaScript']
+                      li.skills-row__item
+                        .skill
+                          svg.skill__circle
+                          .skill__title #{skill}
+
   include ../common/footer.pug
