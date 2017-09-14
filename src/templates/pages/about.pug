@@ -6,10 +6,11 @@ block variables
 block content
   .content
     include ../common/header.pug
+
     section.section.about
       .about__left
       .about__left-title
-        .block-title Обо мне
+        .block-title #{title}
       .about__left-content
         .user-description
           .user-description__image
@@ -36,5 +37,24 @@ block content
                         .skill
                           svg.skill__circle
                           .skill__title #{skill}
+    section.section.map
+      .google-map
+      .map__contacts
+        .contacts
+          .contacts__title
+            .block-subtitle Contacts
+          ul.contacts__list
+            - 
+              var contacts = [
+                ['skype', 'jekan2005u'],
+                ['mail', 'ivapira@mail.ru'],
+                ['phone', '+7 955 454 51 23'],
+                ['mark', 'Санкт-Петербург'],
+              ]
+            each contact in contacts
+              li.contacts__item
+                .contacts-row
+                  .contacts-row__icon #{contact[0]}
+                  .contacts-row__content #{contact[1]}
 
   include ../common/footer.pug

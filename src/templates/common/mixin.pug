@@ -4,6 +4,6 @@ mixin navItemFooter(url, name, current)
 
 mixin svg(url, class_name, name)
     li.social__items
-        a.social__link(href=url)
+        a(href=url class=`social__link`)
             svg(class=class_name)
                 use(xlink:href=name)
