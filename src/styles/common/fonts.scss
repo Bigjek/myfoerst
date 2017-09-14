@@ -3,15 +3,14 @@
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../fonts/FontAwesome.eot?#iefix') format('embedded-opentype'),  url('../fonts/FontAwesome.otf')  format('opentype'),
-	     url('../fonts/FontAwesome.woff') format('woff'), url('../fonts/FontAwesome.ttf')  format('truetype'), url('../fonts/FontAwesome.svg#FontAwesome') format('svg');
+  src: url('../fonts/FontAwesome.woff2') format('woff2'), url('../fonts/FontAwesome.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'SansusWebissimo';
-  src: url('../fonts/SansusWebissimo.eot?#iefix') format('embedded-opentype'),  url('../fonts/SansusWebissimo.woff') format('woff'), url('../fonts/SansusWebissimo.ttf')  format('truetype'), url('../fonts/SansusWebissimo.svg#SansusWebissimo') format('svg');
+  src: url('../fonts/SansusWebissimo.woff2') format('woff2'), url('../fonts/SansusWebissimo.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
