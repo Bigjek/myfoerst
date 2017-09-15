@@ -4,6 +4,55 @@ block variables
   - var title = 'Мои работы'
 
 block content
-  .content
-    include ../common/header.pug
-    h1 #{title}
+  section.section.header
+    .header__top
+      include ../common/header.pug
+    .header__block
+      .section-title
+        img(src='', alt='').section-title__img
+      .user.header__user
+        .user__block-images
+            img(src="", alt="").user__image
+        .user__description
+          .user__name Евгений Кочешков
+          .user__info Личный сайт веб разработчика
+      .arrow-down.header__scroll-btn
+        a.arrow-down__btn
+  section.section.work
+    .work__center
+      .work-center__title
+        .block-title #{title}
+    .work__left
+      .site-school
+        .site-school__title
+          .block-subtitle Сайт школы онлайн образования
+        .site-school__description HTML, CSS, JAVASCRIPT
+        .site-school__link
+          a(href='#', class='btn-link btn-link_green') Посмотреть сайт
+    .work__right
+      .slider
+        img.slider_img(src="", alt="")
+  section.section.speak
+    .speak-center
+      .speak-center__title
+        .block-title Что обо мне говорят
+      .speak-center__content
+        ul.comment-list
+          li.comment-list__item
+            .comment-list__images
+              img(src="", alt="").comment-list__img
+            .comment-list__content
+              blockquote 
+                p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+              .comment-list__author Ковальчук Дмитрий
+              .comment-list__status - основатель Loftschool 
+      .speak-center__form
+        form.form-contact(action="")
+          .block-subtitle Связяться со мной
+          input.form-contact__name(type="text", name="name", placeholder="Имя")
+          input.form-contact__email(type="email", name="email" placeholder="Email")
+          textarea.form-contact__text(name="msg", cols="30", rows="10",placeholder="Ваше сообщение")
+          .form-contact__btn
+            button.form-contact__sub(type="submit") Отправить
+            button.form-contact__clear(type="reset") Очистить
+  include ../common/footer.pug

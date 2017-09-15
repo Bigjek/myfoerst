@@ -4,7 +4,34 @@ block variables
   - var title = 'Блог'
 
 block content
-  .content
-    include ../common/header.pug
-    h1 #{title}
+  section.section.header
+    .header__top
+      include ../common/header.pug
+    .header__block
+      .section-title
+        img(src='', alt='').section-title__img
+      .user.header__user
+        .user__images
+            img(src="", alt="").user__img
+        .user__description.user__description-blog
+          .user__name Блог
+          .user__info Статьи которые я написал
+      .arrow-down.header__scroll-btn
+        a.arrow-down__btn
+  
+  section.section.blog
+    aside.blog__left
+      ul.aside-menu
+        each item in ['Самое важное в SASS','Приёмы','Самое необходимое','Почему я выбрал PUG']
+          li.aside-menu__item
+            a(herf='#' class=`aside-menu__link`) #{item}
+    .blog__right
+      article.blog-description
+        .blog-description__title 
+          h2 Самое важное в SASS
+        .blog-description__date 15 сентября 2017
+        .blog-description__text.text-content
+          p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut aperiam atque molestias. Amet at ea eligendi, et nisi delectus neque hic nam nesciunt perferendis odit maiores velit sit rerum facere!
+          p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat facilis fugit voluptatum quidem, id iste nam recusandae amet quisquam, vel inventore perspiciatis aut. Quasi quod placeat ipsum dignissimos harum voluptatibus mollitia fugit ipsam sequi beatae. Praesentium ratione perspiciatis magni porro tempora doloremque ipsum laborum voluptates hic, fuga quia architecto. Dicta!
+          code Код
   include ../common/footer.pug

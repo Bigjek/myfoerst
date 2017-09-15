@@ -4,11 +4,22 @@ block variables
   - var title = 'Обо мне'
 
 block content
-  .content
-    include ../common/header.pug
-
-    section.section.about
-      .about__left
+  section.section.header
+    .header__top
+      include ../common/header.pug
+    .header__block
+      .section-title
+        img(src='', alt='').section-title__img
+      .user.header__user
+        .user__images
+            img(src="", alt="").user__img
+        .user__description
+          .user__name Евгений Кочешков
+          .user__info Личный сайт веб разработчика
+      .arrow-down.header__scroll-btn
+        a.arrow-down__btn
+  section.section.about
+    .about__left
       .about__left-title
         .block-title #{title}
       .about__left-content
@@ -20,41 +31,40 @@ block content
           .user-description__text.text-content
             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ipsum reprehenderit molestiae accusantium. Est adipisci, maiores, quaerat totam asperiores ipsam quasi.
             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis harum repellendus unde distinctio tempore natus quaerat praesentium necessitatibus.
-      .about__right
-        .about__right-title
-          .block-subtitle Чем я могу быть вам полезен
-        .about__right-text.text-content
-          p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-        .about__right-content
-          ul.skills-list
-            each item in ['Frontend', 'Backend', 'Workflow']
-              li.skills-list__item
-                .skills-row
-                  .skills-row__title #{item}
-                  ul.skills-row__list
-                    each skill in ['Html5', 'css3', 'JavaScript']
-                      li.skills-row__item
-                        .skill
-                          svg.skill__circle
-                          .skill__title #{skill}
-    section.section.map
-      .google-map
-      .map__contacts
-        .contacts
-          .contacts__title
-            .block-subtitle Contacts
-          ul.contacts__list
-            - 
-              var contacts = [
-                ['skype', 'jekan2005u'],
-                ['mail', 'ivapira@mail.ru'],
-                ['phone', '+7 955 454 51 23'],
-                ['mark', 'Санкт-Петербург'],
-              ]
-            each contact in contacts
-              li.contacts__item
-                .contacts-row
-                  .contacts-row__icon #{contact[0]}
-                  .contacts-row__content #{contact[1]}
-
+    .about__right
+      .about__right-title
+        .block-subtitle Чем я могу быть вам полезен
+      .about__right-text.text-content
+        p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+      .about__right-content
+        ul.skills-list
+          each item in ['Frontend', 'Backend', 'Workflow']
+            li.skills-list__item
+              .skills-row
+                .skills-row__title #{item}
+                ul.skills-row__list
+                  each skill in ['Html5', 'css3', 'JavaScript']
+                    li.skills-row__item
+                      .skill
+                        svg.skill__circle
+                        .skill__title #{skill}
+  section.section.map
+    .google-map
+    .map__contacts
+      .contacts
+        .contacts__title
+          .block-subtitle Contacts
+        ul.contacts__list
+          - 
+            var contacts = [
+              ['skype', 'jekan2005u'],
+              ['mail', 'ivapira@mail.ru'],
+              ['phone', '+7 955 454 51 23'],
+              ['mark', 'Санкт-Петербург'],
+            ]
+          each contact in contacts
+            li.contacts__item
+              .contacts-row
+                .contacts-row__icon #{contact[0]}
+                .contacts-row__content #{contact[1]}
   include ../common/footer.pug

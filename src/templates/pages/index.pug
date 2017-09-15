@@ -4,10 +4,49 @@ block variables
   - var title = 'Добро пожаловать'
 
 block content
-  h1 Главная
-  form
-    label(for="email") 
-    input(name="email" id="email")
-    label(for="password") 
-    input(name="password" id="password")
-    button Войти
+  header.header-login
+    .header-login__btn
+      a(href='#', class='btn-link btn-link_opacity') Авторизоваться
+  section.section.main
+    .main-center
+      .main-center__content
+        .user.main__user
+          .user__block-images
+              img(src="", alt="").user__image
+          .user__description
+            .user__name Евгений Кочешков
+            .user__info Личный сайт веб разработчика
+        ul.social.main-social
+          each i in social
+              +svg(i.url, i.class_name, i.name)
+      .main-center__footer
+        nav.navigate
+          ul.navigate__block
+            li.naligate__item
+              a.navigate__link Название
+  section.section.login
+    .main-center
+      .main-center__content
+        form.form-login 
+          .block-subtitle.block-subtitle_white Авторизуйтесь
+          .input-group
+            span.input-group__icon
+            input.form-contact__name(type="text" name="login" placeholder="Логин")
+          .input-group
+            span.input-group__icon  
+            input.form-contact__email(type="password" name="password" placeholder="Пароль")
+          input(type="checkbox" name="children" id="children" checked)
+          label(for="children") Я человек
+          .form-login__check Вы точно не робот?
+            input(type="radio" name="robot" value="1" checked) 
+            label Да
+            input(type="radio" name="robot" value="0") 
+            label Не уверен
+      .main-center__footer
+        nav.navigate
+          ul.navigate__block
+            li.naligate__item
+              a.navigate__link Название
+  footer.footer
+    .footer__bottom.footer__bottom_opacity 
+      .footer__bottom-copyright © Евгений Кочешков | Создано с любовью в LoftSchool | 2017
