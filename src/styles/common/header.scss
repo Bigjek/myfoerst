@@ -5,6 +5,13 @@
     &__block{
         
     }
+    &-login{
+        display: flex;
+        justify-content: flex-end;
+        &__btn{
+            margin: 20px 10px 0 0;
+        }
+    }
 }
 .social{
     padding: 0;

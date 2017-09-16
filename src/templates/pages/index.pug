@@ -2,6 +2,7 @@ extends ../template
 
 block variables
   - var title = 'Добро пожаловать'
+  - var nav = [{url:'/my-works.html',name:'Мои работы'},{ url:'/about.html',name:'Обо мне'},{ url:'/my-blog.html',name:'Блог'}]
 
 block content
   .container
@@ -13,7 +14,7 @@ block content
         .main-center__content
           .user.main__user
             .user__block-images
-                img(src="", alt="").user__image
+                img(src="./assets/img/logo.jpg", alt="logo").user__image
             .user__description
               .user__name Евгений Кочешков
               .user__info Личный сайт веб разработчика
@@ -23,8 +24,8 @@ block content
         .main-center__footer
           nav.navigate
             ul.navigate__block
-              li.naligate__item
-                a.navigate__link Название
+              each i in nav
+                +navMenu(i.url, i.name)
     section.section.login
       .main-center
         .main-center__content

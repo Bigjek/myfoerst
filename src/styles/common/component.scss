@@ -1,0 +1,20 @@
+.btn{
+    &-link{
+        @include roboto(m);
+        display: inline-block;
+        font-size: 16px;
+        padding: 15px 25px;
+        border-radius: 25px; 
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+        &_opacity{
+            background: none;
+            border: 1px solid white;
+            &:hover, &:active, &:focus{
+                background: $green-color;
+                border: 1px solid $green-color;
+            }
+        }
+    }
+}

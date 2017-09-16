@@ -1,0 +1,36 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-center{
+        background: rgba(0, 0, 0, 0.45);
+        min-width: 380px;
+        padding: 40px 0;
+        text-align: center;
+    }
+}
+.login{
+    display: none;
+}
+.user{
+    &__block-images{
+        text-align: center;
+    }
+    &__image{
+        border-radius: 50%;
+    }
+    &__description{
+        line-height: 1.4;
+        margin: 10px 0 30px;
+    }
+    &__name{
+        @include roboto(m);
+        font-size: 28px;
+        color:white;
+    }
+    &__info{
+        @include roboto(r);
+        font-size: 16px;
+        color:white
+    }
+}

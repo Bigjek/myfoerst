@@ -1,5 +1,5 @@
-mixin navItemFooter(url, name, current)
-    li.footer-menu__item(class={active: current})
+mixin navItemFooter(url, name)
+    li.footer-menu__item
         a.footer-menu__link(href=url)= name
 
 mixin svg(url, class_name, name)
@@ -7,3 +7,7 @@ mixin svg(url, class_name, name)
         a(href=url class=`social__link`)
             svg(class=class_name)
                 use(xlink:href=name)
+
+mixin navMenu(url, name)
+    li.naligate__item
+        a.naligate__link(href=url)= name
