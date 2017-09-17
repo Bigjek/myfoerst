@@ -8,9 +8,13 @@
     &-login{
         display: flex;
         justify-content: flex-end;
+        flex: 0 0 auto;
         &__btn{
             margin: 20px 10px 0 0;
         }
+    }
+    &__user{
+        margin:68px auto 0;
     }
 }
 .social{
@@ -20,7 +24,7 @@
     margin: 0;
     &__items{
         display: inline-block;
-        padding: 0 14px;
+        padding: 0 10px;
     }
     &__link{
         vertical-align: middle;
@@ -35,6 +39,8 @@
     display: inline-block;
     float: right;
     &__link{
+        background: none;
+        border: 0;
         &:hover{
             svg, path{
                 fill: $green-color;

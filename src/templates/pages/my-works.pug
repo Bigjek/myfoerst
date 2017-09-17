@@ -2,8 +2,8 @@ extends ../template
 
 block variables
   - var title = 'Мои работы'
-  - var nav = [{url:'/my-works.html',name:'Мои работы'},{ url:'/about.html',name:'Обо мне'},{ url:'/my-blog.html',name:'Блог'},{url:'/index.html' ,name:'Авторизация'}]
-
+  - var nav = [{url:'/my-works.html',name:'Мои работы'},{ url:'/about.html',name:'Обо мне'},{ url:'/my-blog.html',name:'Блог'},{url:'/user.html' ,name:'Авторизация'}]
+  - var box = 'triangle-box-lite'
 block content
   .container
     section.section.header
@@ -11,33 +11,44 @@ block content
         include ../common/header.pug
       .header__block
         .section-title
-          img(src='', alt='').section-title__img
+          svg(class="icon-lite" width="100%" height="260")
+            use(xlink:href="assets/img/sprite.svg#portfolio_header") 
         .user.header__user
           .user__block-images
-              img(src="", alt="").user__image
-          .user__description
-            .user__name Евгений Кочешков
+              img(src="./assets/img/logo.jpg", alt="logo").user__image
+          .user__description.user__description_l
+            .user__name.user__name_size Евгений Кочешков
             .user__info Личный сайт веб разработчика
         .arrow-down.header__scroll-btn
-          a.arrow-down__btn
+          button.arrow-down__btn
+            svg(class="icon" width="28" height="28")
+              use(xlink:href="assets/img/sprite.svg#arrow_down") 
     section.section.work
+      +tringleBox(box)
       .work__center
-        .work-center__title
-          .block-title #{title}
-      .work__left
-        .site-school
-          .site-school__title
-            .block-subtitle Сайт школы онлайн образования
-          .site-school__description HTML, CSS, JAVASCRIPT
-          .site-school__link
-            a(href='#', class='btn-link btn-link_green') Посмотреть сайт
-      .work__right
-        .slider
-          img.slider_img(src="", alt="")
+        .section-title.section-title_m
+          svg(class="icon-green" width="100%" height="150")
+            use(xlink:href="assets/img/sprite.svg#works_header")
+        .work__title
+          h1.block-title.block-title_gray-h #{title}
+      .work__block
+        .work__left
+          .site-school
+            .site-school__title
+              h2.block-subtitle.block-subtitle_gray Сайт школы онлайн образования
+            .site-school__description HTML, CSS, JAVASCRIPT
+            .site-school__link
+              a(href='#', class='btn-link btn-link_green') Посмотреть сайт
+        .work__right
+          .slider
+            img.slider_img(src="", alt="")
     section.section.speak
       .speak-center
+        .section-title.section-title_m
+          svg(class="icon-green" width="100%" height="150")
+            use(xlink:href="assets/img/sprite.svg#about_header")
         .speak-center__title
-          .block-title Что обо мне говорят
+          h1.block-title.block-title_gray-h Что обо мне говорят
         .speak-center__content
           ul.comment-list
             li.comment-list__item
@@ -50,7 +61,7 @@ block content
                 .comment-list__status - основатель Loftschool 
         .speak-center__form
           form.form-contact(action="")
-            .block-subtitle Связяться со мной
+            h2.block-subtitle.block-subtitle_gray Связяться со мной
             input.form-contact__name(type="text", name="name", placeholder="Имя")
             input.form-contact__email(type="email", name="email" placeholder="Email")
             textarea.form-contact__text(name="msg", cols="30", rows="10",placeholder="Ваше сообщение")

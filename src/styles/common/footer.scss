@@ -32,9 +32,9 @@
         margin-bottom: 15px; 
         &__item{
             display: inline-block;
-            padding: 0 10px;
+            padding: 0 5px;
         }
-        &-link{
+        &__link{
             @include roboto(m);
             font-size: 16px;
             text-decoration: none;
@@ -42,8 +42,10 @@
         }
     }
     &-social{
-        &__item{
-            &-link{
+        .icon-svg{
+            fill: rgba(255, 255, 255, 0.69);
+            &:hover{
+                fill:white;
             }
         }
     }

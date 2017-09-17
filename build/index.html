@@ -13,77 +13,45 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="container">
-        <header class="header-login">
-          <div class="header-login__btn"><a class="btn-link btn-link_opacity" href="#">Авторизоваться</a></div>
-        </header>
-        <section class="section main">
-          <div class="main-center">
-            <div class="main-center__content">
-              <div class="user main__user">
-                <div class="user__block-images"><img class="user__image" src="./assets/img/logo.jpg" alt="logo"></div>
-                <div class="user__description">
-                  <div class="user__name">Евгений Кочешков</div>
-                  <div class="user__info">Личный сайт веб разработчика</div>
-                </div>
+      <header class="header-login">
+        <div class="header-login__btn"><a class="btn-link btn-link_opacity" href="/user.html">Авторизоваться</a></div>
+      </header>
+      <main class="main">
+        <div class="main-center">
+          <div class="main-center__content">
+            <div class="user main__user">
+              <div class="user__block-images"><img class="user__image" src="./assets/img/logo.jpg" alt="logo"></div>
+              <div class="user__description">
+                <div class="user__name">Евгений Кочешков</div>
+                <div class="user__info">Личный сайт веб разработчика</div>
               </div>
-              <ul class="social main-social">
-                <li class="social__items"><a class="social__link" href="https://vk.com">
-                    <svg class="icon-svg">
-                      <use xlink:href="assets/img/sprite.svg#vk"></use>
-                    </svg></a></li>
-                <li class="social__items"><a class="social__link" href="https://github.com/Bigjek">
-                    <svg class="icon-svg">
-                      <use xlink:href="assets/img/sprite.svg#github"></use>
-                    </svg></a></li>
-                <li class="social__items"><a class="social__link" href="#">
-                    <svg class="icon-svg">
-                      <use xlink:href="assets/img/sprite.svg#in"></use>
-                    </svg></a></li>
+            </div>
+            <ul class="social main-social">
+              <li class="social__items"><a class="social__link" href="https://vk.com" target="_blank">
+                  <svg class="icon-svg">
+                    <use xlink:href="assets/img/sprite.svg#vk"></use>
+                  </svg></a></li>
+              <li class="social__items"><a class="social__link" href="https://github.com/Bigjek" target="_blank">
+                  <svg class="icon-svg">
+                    <use xlink:href="assets/img/sprite.svg#github"></use>
+                  </svg></a></li>
+              <li class="social__items"><a class="social__link" href="#" target="_blank">
+                  <svg class="icon-svg">
+                    <use xlink:href="assets/img/sprite.svg#in"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+          <div class="main-center__footer">
+            <nav class="navigate">
+              <ul class="navigate__block">
+                <li class="navigate__item"><a class="navigate__link" href="/my-works.html">Мои работы</a></li>
+                <li class="navigate__item"><a class="navigate__link" href="/about.html">Обо мне</a></li>
+                <li class="navigate__item"><a class="navigate__link" href="/my-blog.html">Блог</a></li>
               </ul>
-            </div>
-            <div class="main-center__footer">
-              <nav class="navigate">
-                <ul class="navigate__block">
-                  <li class="naligate__item"><a class="naligate__link" href="/my-works.html">Мои работы</a></li>
-                  <li class="naligate__item"><a class="naligate__link" href="/about.html">Обо мне</a></li>
-                  <li class="naligate__item"><a class="naligate__link" href="/my-blog.html">Блог</a></li>
-                </ul>
-              </nav>
-            </div>
+            </nav>
           </div>
-        </section>
-        <section class="section login">
-          <div class="main-center">
-            <div class="main-center__content">
-              <form class="form-login"> 
-                <div class="block-subtitle block-subtitle_white">Авторизуйтесь</div>
-                <div class="input-group"><span class="input-group__icon"></span>
-                  <input class="form-contact__name" type="text" name="login" placeholder="Логин">
-                </div>
-                <div class="input-group"><span class="input-group__icon"> </span>
-                  <input class="form-contact__email" type="password" name="password" placeholder="Пароль">
-                </div>
-                <input type="checkbox" name="children" id="children" checked>
-                <label for="children">Я человек</label>
-                <div class="form-login__check">Вы точно не робот?
-                  <input type="radio" name="robot" value="1" checked>
-                  <label>Да</label>
-                  <input type="radio" name="robot" value="0">
-                  <label>Не уверен</label>
-                </div>
-              </form>
-            </div>
-            <div class="main-center__footer">
-              <nav class="navigate">
-                <ul class="navigate__block">
-                  <li class="naligate__item"><a class="navigate__link">Название</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </section>
-      </div>
+        </div>
+      </main>
       <footer class="footer">
         <div class="footer__bottom footer__bottom_opacity"> 
           <div class="footer__bottom-copyright">© Евгений Кочешков | Создано с любовью в LoftSchool | 2017</div>

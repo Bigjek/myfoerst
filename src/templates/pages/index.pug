@@ -2,53 +2,28 @@ extends ../template
 
 block variables
   - var title = 'Добро пожаловать'
-  - var nav = [{url:'/my-works.html',name:'Мои работы'},{ url:'/about.html',name:'Обо мне'},{ url:'/my-blog.html',name:'Блог'}]
-
+  - var navList = [{url:'/my-works.html',name:'Мои работы'},{ url:'/about.html',name:'Обо мне'},{ url:'/my-blog.html',name:'Блог'}]
+  - var menu = 'navigate'
 block content
-  .container
-    header.header-login
-      .header-login__btn
-        a(href='#', class='btn-link btn-link_opacity') Авторизоваться
-    section.section.main
-      .main-center
-        .main-center__content
-          .user.main__user
-            .user__block-images
-                img(src="./assets/img/logo.jpg", alt="logo").user__image
-            .user__description
-              .user__name Евгений Кочешков
-              .user__info Личный сайт веб разработчика
-          ul.social.main-social
-            each i in social
-                +svg(i.url, i.class_name, i.name)
-        .main-center__footer
-          nav.navigate
-            ul.navigate__block
-              each i in nav
-                +navMenu(i.url, i.name)
-    section.section.login
-      .main-center
-        .main-center__content
-          form.form-login 
-            .block-subtitle.block-subtitle_white Авторизуйтесь
-            .input-group
-              span.input-group__icon
-              input.form-contact__name(type="text" name="login" placeholder="Логин")
-            .input-group
-              span.input-group__icon  
-              input.form-contact__email(type="password" name="password" placeholder="Пароль")
-            input(type="checkbox" name="children" id="children" checked)
-            label(for="children") Я человек
-            .form-login__check Вы точно не робот?
-              input(type="radio" name="robot" value="1" checked) 
-              label Да
-              input(type="radio" name="robot" value="0") 
-              label Не уверен
-        .main-center__footer
-          nav.navigate
-            ul.navigate__block
-              li.naligate__item
-                a.navigate__link Название
+
+  header.header-login
+    .header-login__btn
+      a(href='/user.html', class='btn-link btn-link_opacity') Авторизоваться
+  main.main
+    .main-center
+      .main-center__content
+        .user.main__user
+          .user__block-images
+              img(src="./assets/img/logo.jpg", alt="logo").user__image
+          .user__description
+            .user__name Евгений Кочешков
+            .user__info Личный сайт веб разработчика
+        ul.social.main-social
+          each i in social
+              +svg(i.url, i.class_name, i.name)
+      .main-center__footer
+        nav.navigate
+          +navMenu(menu, navList)
   footer.footer
     .footer__bottom.footer__bottom_opacity 
       .footer__bottom-copyright © Евгений Кочешков | Создано с любовью в LoftSchool | 2017

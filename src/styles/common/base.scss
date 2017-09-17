@@ -1,6 +1,5 @@
-* {
-    margin: 0;
-    padding: 0;
+* , :after , :before{
+    box-sizing: border-box;
 }
 html,
 body{
@@ -11,14 +10,24 @@ body{
     background-size: cover;
 }
 h1{
-    @include sansus(m);
+    @include sansus(w);
     font-size: 63px;
     padding: 70px 0;
 }
 h2{
-    @include sansus(m);
+    @include sansus(w);
     font-size: 35px;
     padding-bottom: 40px;
+}
+input, button{
+    outline: none;
+}
+ul, blockquote{
+    margin: 0;
+}
+p{
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 .wrapper {
     display: flex;
@@ -34,7 +43,12 @@ h2{
 // color
 $green-color:  #4e8839;
 $green: #6c9c5a;
+$green-circle: #77a266;
 $green-alf:rgba(108, 156, 90, 0.61);
 $gray-color: #373e42;
 $gray-color-alf: rgba(55, 62, 66, 0.77);
 $gray-border: #69716e;
+$gray-h2: #566358;
+$gray-h1: #373e42;
+$biege: #ebefe2;
+$biege-l: #f4f5f0;

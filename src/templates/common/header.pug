@@ -2,6 +2,6 @@ ul.social
     each i in social
         +svg(i.url, i.class_name, i.name)
 .menu
-    a.menu__link(href="#") 
-        include ../../img/icons/hamburger.svg
-        
+    button.menu__link 
+        svg(class="icon" width="40" height="40")
+            use(xlink:href="assets/img/sprite.svg#hamburger") 

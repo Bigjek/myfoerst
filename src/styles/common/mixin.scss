@@ -32,10 +32,13 @@
 @mixin sansus($style : w){
     @if $style == w {
         font-family: 'SansusWebissimo';
+        text-transform: uppercase;
+        font-weight: normal;
     }
 }
 @mixin font($style : a){
     @if $style == a {
         font-family: 'FontAwesome';
+        font-weight: normal;
     }
 }
