@@ -272,6 +272,7 @@
     }
     &__right{
         background: #e1e4d7;
+        display: flex;
         &-text{
             margin-bottom: 50px;
         }
@@ -284,7 +285,7 @@
     }
 }
 .speak{
-    padding-top: 50px;
+    padding-top: 55px;
     background: url('/assets/img/bg_works.jpg') center no-repeat;
     background-size: cover;
     &-center{
@@ -328,6 +329,20 @@
         &__content{
             @include roboto(i);
             color: $gray-h2;
+        }
+        &__images{
+            margin: 5px auto 15px;
+            width: 77px;
+            height: 77px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        &__img{
+            width: 100%;
+            height: auto;
+        }
+        &__blockquote{
+            margin-bottom: 15px;
         }
     }
 }

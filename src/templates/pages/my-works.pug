@@ -19,7 +19,7 @@ block content
           .user__description.user__description_l
             .user__name.user__name_size Евгений Кочешков
             .user__info Личный сайт веб разработчика
-        .arrow-down.header__scroll-btn
+        .arrow-down.arrow-down__btn_up
           button.arrow-down__btn
             svg(class="icon" width="28" height="28")
               use(xlink:href="assets/img/sprite.svg#arrow_down") 
@@ -44,7 +44,15 @@ block content
                 span.site-school__text Посмотреть сайт
         .work__right
           .slider
-            img.slider_img(src="", alt="")
+            .slider__content
+              img.slider_img(src="assets/img/logo.jpg", alt="")
+            .slider__btn
+              button.slider__btn-left
+                svg(class="icon" width="28" height="28")
+                  use(xlink:href="assets/img/sprite.svg#portf_arrow_down") 
+              button.slider__btn-right
+                svg(class="icon" width="28" height="28")
+                  use(xlink:href="assets/img/sprite.svg#portf_arrow_up") 
     section.section.speak
       .speak-center
         .section-title.section-title_m
@@ -56,7 +64,7 @@ block content
           ul.comment-list
             li.comment-list__item
               .comment-list__images
-                img(src="", alt="").comment-list__img
+                img(src="assets/img/com.png", alt="").comment-list__img
               .comment-list__content.text-content
                 blockquote 
                   p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
@@ -64,9 +72,9 @@ block content
                 .comment-list__status — основатель Loftschool 
             li.comment-list__item
               .comment-list__images
-                img(src="", alt="").comment-list__img
+                img(src="assets/img/logo.jpg", alt="").comment-list__img
               .comment-list__content.text-content
-                blockquote 
+                blockquote.comment-list__blockquote
                   p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
                 .comment-list__author Ковальчук Дмитрий
                 .comment-list__status — основатель Loftschool 
@@ -83,4 +91,8 @@ block content
             .form-contact__btn
               button.form-contact__sub(type="submit") Отправить
               button.form-contact__clear(type="reset") Очистить
+        .arrow-down
+          button.arrow-down__btn.arrow-down__btn_down
+            svg(class="icon" width="28" height="28")
+              use(xlink:href="assets/img/sprite.svg#portf_arrow_up") 
   include ../common/footer.pug
