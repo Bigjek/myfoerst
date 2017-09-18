@@ -24,7 +24,6 @@
 .user{
     width: 100%;
     min-width: 340px;
-    // text-align: center;
     &__block-images{
         text-align: center;
     }
@@ -266,23 +265,83 @@
         align-content: space-between;
         justify-content: space-between;
         flex-flow: row nowrap;
+        min-height: 750px;
     }
     &__left, &__right{
         width: 50%;
     }
     &__right{
         background: #e1e4d7;
-        padding: 15px 40px 20px;
         &-text{
             margin-bottom: 50px;
         }
     }
     &__left{
         background: $biege;
-        padding: 15px 80px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 .speak{
-    background: $biege-l;
+    padding-top: 50px;
+    background: url('/assets/img/bg_works.jpg') center no-repeat;
+    background-size: cover;
+    &-center{
+        &__form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 680px;
+        }
+        &__content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 }
-
+.comment{
+    &-list{
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__item{
+            max-width: 400px;
+            width: 100%;
+            flex-basis: auto;
+            flex-grow: 1;
+            padding: 0 10px
+        }
+        &__author{
+            @include roboto(bi);
+            color: $green-color;
+            text-align: center;
+        }
+        &__status{
+            text-align: center;
+            color: $gray-h1;
+        }
+        &__content{
+            @include roboto(i);
+            color: $gray-h2;
+        }
+    }
+}
+.site{
+    &-school{
+        text-align: center;
+        max-width: 340px;
+        &__description{
+            @include roboto(m);
+            color: $green-color;
+            margin-bottom: 60px;
+        }
+        &__text{
+            padding-left: 30px;
+        }
+    }
+}

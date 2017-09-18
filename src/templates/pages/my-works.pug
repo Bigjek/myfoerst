@@ -38,7 +38,10 @@ block content
               h2.block-subtitle.block-subtitle_gray Сайт школы онлайн образования
             .site-school__description HTML, CSS, JAVASCRIPT
             .site-school__link
-              a(href='#', class='btn-link btn-link_green') Посмотреть сайт
+              a(href='#', class='btn-link btn-link_green')
+                svg(class="icon-white" width="20" height="20")
+                  use(xlink:href="assets/img/sprite.svg#link")
+                span.site-school__text Посмотреть сайт
         .work__right
           .slider
             img.slider_img(src="", alt="")
@@ -54,17 +57,29 @@ block content
             li.comment-list__item
               .comment-list__images
                 img(src="", alt="").comment-list__img
-              .comment-list__content
+              .comment-list__content.text-content
                 blockquote 
                   p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
                 .comment-list__author Ковальчук Дмитрий
-                .comment-list__status - основатель Loftschool 
+                .comment-list__status — основатель Loftschool 
+            li.comment-list__item
+              .comment-list__images
+                img(src="", alt="").comment-list__img
+              .comment-list__content.text-content
+                blockquote 
+                  p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                .comment-list__author Ковальчук Дмитрий
+                .comment-list__status — основатель Loftschool 
         .speak-center__form
-          form.form-contact(action="")
-            h2.block-subtitle.block-subtitle_gray Связяться со мной
-            input.form-contact__name(type="text", name="name", placeholder="Имя")
-            input.form-contact__email(type="email", name="email" placeholder="Email")
-            textarea.form-contact__text(name="msg", cols="30", rows="10",placeholder="Ваше сообщение")
+          form.form-contact.form-contact_w(action="")
+            .form-contact__top
+              h2.block-subtitle.block-subtitle_gray Связяться со мной
+              .input-group
+                input.form-contact__name.form-contact__name_b(type="text", name="name", placeholder="Имя")
+              .input-group
+                input.form-contact__email.form-contact__email_b(type="email", name="email" placeholder="Email")
+              .input-group  
+                textarea.form-contact__text.form-contact__text_b(name="msg", cols="30", rows="6",placeholder="Ваше сообщение")
             .form-contact__btn
               button.form-contact__sub(type="submit") Отправить
               button.form-contact__clear(type="reset") Очистить

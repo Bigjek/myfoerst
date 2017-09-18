@@ -16,6 +16,17 @@
                 border: 1px solid $green-color;
             }
         }
+        &_green{
+            background: $green-color;
+            &:hover, &:active, &:focus{
+                background: none;
+                border: 1px solid $green-color;
+                color: $green-color;
+                .icon-white{
+                    fill: $green-color;
+                }
+            }
+        }
     }
 }
 .block{
@@ -60,7 +71,8 @@
         &_gray-h{
             color: $gray-h1;
             padding-bottom: 20px;
-            margin-bottom: 30px;
+            max-width: 380px;
+            margin: 0 auto 30px;
             &:before{
                 background: $gray-h1;
             }
@@ -80,12 +92,51 @@
         }
     }
     &-contact{
-        &__name, &__email{
+        &__name, &__email, &__text{
             padding: 14px 20px;
             line-height: normal;
             border: none;
             width: 87%;
-            
+            &_b{
+                width: 100%;
+                border-radius: 25px;
+                overflow: hidden;
+            }
+        }
+        &__top{
+            padding: 40px 20px 0;
+        }
+        &_w{
+            max-width: 380px;
+            background: rgba(222, 222, 222, 0.45);
+            width: 100%;
+            overflow: hidden;
+            border-radius: 7px;
+        }
+        &__btn{
+            display: flex;
+            list-style: none;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            flex-flow: row wrap;
+        }
+        &__sub, &__clear{
+            flex-basis: auto;
+            flex-grow: 1;
+            border: 0;
+            border-right: 1px solid white;
+            color: white;
+            padding: 14px 0;
+            background: $green;
+            @include roboto(m);
+            &:last-child{
+                border: 0;
+            } 
+            &:hover, &:active, &:focus{
+                background: $green-color;
+                cursor: pointer;
+            }
         }
         &__check{
             display: none;
@@ -132,6 +183,7 @@
                     background-color: white;
                 }
             }
+            
         }
         &__radio{
             display: none;

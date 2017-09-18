@@ -84,7 +84,10 @@
                   <h2 class="block-subtitle block-subtitle_gray">Сайт школы онлайн образования</h2>
                 </div>
                 <div class="site-school__description">HTML, CSS, JAVASCRIPT</div>
-                <div class="site-school__link"><a class="btn-link btn-link_green" href="#">Посмотреть сайт</a></div>
+                <div class="site-school__link"><a class="btn-link btn-link_green" href="#">
+                    <svg class="icon-white" width="20" height="20">
+                      <use xlink:href="assets/img/sprite.svg#link"></use>
+                    </svg><span class="site-school__text">Посмотреть сайт</span></a></div>
               </div>
             </div>
             <div class="work__right">
@@ -106,22 +109,40 @@
               <ul class="comment-list">
                 <li class="comment-list__item">
                   <div class="comment-list__images"><img class="comment-list__img" src="" alt=""></div>
-                  <div class="comment-list__content">
+                  <div class="comment-list__content text-content">
                     <blockquote> 
                       <p>Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</p>
                     </blockquote>
                     <div class="comment-list__author">Ковальчук Дмитрий</div>
-                    <div class="comment-list__status">- основатель Loftschool </div>
+                    <div class="comment-list__status">— основатель Loftschool </div>
+                  </div>
+                </li>
+                <li class="comment-list__item">
+                  <div class="comment-list__images"><img class="comment-list__img" src="" alt=""></div>
+                  <div class="comment-list__content text-content">
+                    <blockquote> 
+                      <p>Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</p>
+                    </blockquote>
+                    <div class="comment-list__author">Ковальчук Дмитрий</div>
+                    <div class="comment-list__status">— основатель Loftschool </div>
                   </div>
                 </li>
               </ul>
             </div>
             <div class="speak-center__form">
-              <form class="form-contact" action="">
-                <h2 class="block-subtitle block-subtitle_gray">Связяться со мной</h2>
-                <input class="form-contact__name" type="text" name="name" placeholder="Имя">
-                <input class="form-contact__email" type="email" name="email" placeholder="Email">
-                <textarea class="form-contact__text" name="msg" cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
+              <form class="form-contact form-contact_w" action="">
+                <div class="form-contact__top">
+                  <h2 class="block-subtitle block-subtitle_gray">Связяться со мной</h2>
+                  <div class="input-group">
+                    <input class="form-contact__name form-contact__name_b" type="text" name="name" placeholder="Имя">
+                  </div>
+                  <div class="input-group">
+                    <input class="form-contact__email form-contact__email_b" type="email" name="email" placeholder="Email">
+                  </div>
+                  <div class="input-group"> 
+                    <textarea class="form-contact__text form-contact__text_b" name="msg" cols="30" rows="6" placeholder="Ваше сообщение"></textarea>
+                  </div>
+                </div>
                 <div class="form-contact__btn">
                   <button class="form-contact__sub" type="submit">Отправить</button>
                   <button class="form-contact__clear" type="reset">Очистить</button>

@@ -30,6 +30,10 @@
         fill: #e2ebd0;
         z-index: 0;
     }
+    &-white{
+        fill: white;
+        position: absolute;
+    }
     &-green-lite{
         fill: $green-color;
         z-index: 0;
