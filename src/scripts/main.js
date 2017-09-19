@@ -1,4 +1,5 @@
-// const $ = require('jquery');
 const slider = require ('./common/slider');
+const modalNav = require ('./common/modal');
 
-slider(); //инициализация
+slider(); 
+modalNav();

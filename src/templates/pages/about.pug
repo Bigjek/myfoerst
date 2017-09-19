@@ -5,6 +5,7 @@ block variables
   - var nav = [{url:'/my-works.html',name:'Мои работы'},{ url:'/about.html',name:'Обо мне'},{ url:'/my-blog.html',name:'Блог'},{url:'/user.html' ,name:'Авторизация'}]
   - var box = 'triangle-box' 
   - var skill = [{title:'Frontend',list:[{title:'HTML',pro:'75'},{title:'CSS',pro:'80'},{title:'JavaScript & jQuery',pro:'75'}]},{title:'Backend', list:[{title:'PHP',pro:'35'},{title:'mySQL',pro:'50'},{title:'Node.js & npm',pro:'50'},{title:'Mongo.db',pro:'65'}]},{title:'Workflow', list:[{title:'Git',pro:'85'},{title:'Gulp',pro:'90'},{title:'Bower',pro:'70'}]}] 
+
 block content
   .container
     section.section.header
@@ -61,6 +62,7 @@ block content
                           
     section.section.map
       .google-map
+        #map
       .map__contacts
         .contacts
           .contacts__title
@@ -88,3 +90,6 @@ block content
               .contacts__block Санкт-Петербург
 
   include ../common/footer.pug
+  include ../common/modal.pug
+block script
+  include ../common/maps.pug
