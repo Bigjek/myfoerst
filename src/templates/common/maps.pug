@@ -1,4 +1,4 @@
-script(src="https://maps.googleapis.com/maps/api/js?v=3.exp")
+script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABMVDqkLdKh_gYee89lEb9QJRe7WGq5fA&v=3.exp")
 script.
     var map, marker, piter = new google.maps.LatLng(59.731269, 30.611774), newPiter = new google.maps.LatLng(59.733335, 30.604035), image;
     function initialize() {
@@ -57,7 +57,7 @@ script.
         });
         
         image = new google.maps.MarkerImage(
-            '/assets/img/icons/map_marker.svg',
+            'assets/img/icons/map_marker.svg',
             new google.maps.Size(40,60),
             new google.maps.Point(0,0),
         );
