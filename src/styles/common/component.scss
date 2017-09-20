@@ -119,17 +119,19 @@
             list-style: none;
             padding: 0;
             justify-content: center;
-            align-items: center;
+            align-items: stretch;
             flex-flow: row wrap;
         }
         &__sub, &__clear{
-            flex-basis: auto;
-            flex-grow: 1;
+            display: flex;
+            flex: 1;
+            justify-content: center;
             border: 0;
             border-right: 1px solid white;
             color: white;
-            padding: 14px 0;
+            padding: 14px;
             background: $green;
+            width: 100%;
             @include roboto(m);
             &:last-child{
                 border: 0;
