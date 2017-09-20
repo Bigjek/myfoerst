@@ -2,13 +2,13 @@ extends ../template
 
 block variables
   - var title = 'Добро пожаловать'
-  - var navList2 = [{url:'/index.html',name:'Главная'},{ url:'#',name:'Войти'}]
+  - var navList2 = [{url:'/build/index.html',name:'Главная'},{ url:'#',name:'Войти'}]
   - var menu = 'navigate'
 
 block content
     header.header-login
         .header-login__btn
-            a(href='/user.html', class='btn-link btn-link_opacity') Авторизоваться
+            a(href='/build/user.html', class='btn-link btn-link_opacity') Авторизоваться
     main.login
         .main-center
             .main-center__content
