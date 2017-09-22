@@ -9,6 +9,7 @@ block variables
 block content
   .container
     section.section.header
+      h2.visually-hidden Личный сайт веб разработчика
       .header__top
         include ../common/header.pug
       .header__block
@@ -26,6 +27,7 @@ block content
             svg(class="icon" width="28" height="28")
               use(xlink:href="assets/img/sprite.svg#arrow_down") 
     section.section.about
+      h2.visually-hidden Кто я
       +tringleBox(box)
       .about__block
         .about__left
@@ -37,7 +39,7 @@ block content
           .about__left-content
             .user-description
               .user-description__image
-                img.user-description__avatar(src="assets/img/logo1.jpg")
+                img.user-description__avatar(src="assets/img/logo1.jpg", alt="")
               .user-description__title
                 h2.block-subtitle.block-subtitle_gray Кто я
               .user-description__text.text-content
@@ -61,6 +63,7 @@ block content
                           +svgSkill('skill', skill1.pro)
                           
     section.section.map
+      h2.visually-hidden Google maps
       .google-map
         #map
       .map__contacts

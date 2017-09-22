@@ -10,7 +10,7 @@
     &-svg{
         width: 32px;
         height: 22px;
-        fill: #FFFFFF;
+        fill: white;
         cursor: pointer;
         &:hover{
             fill: $green-color;
@@ -31,7 +31,7 @@
         z-index: 0;
     }
     &-white{
-        fill: white;
+        fill: currentColor;
         position: absolute;
     }
     &-green-lite{

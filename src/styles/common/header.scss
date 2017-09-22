@@ -17,7 +17,7 @@
         margin:68px auto 0;
     }
 }
-.social{
+.web{
     padding: 0;
     list-style: none;
     display: inline-block;
@@ -28,7 +28,7 @@
     }
     &__link{
         vertical-align: middle;
-        &:hover{
+        &:hover, &:focus, &:active{
             svg, path{
                 fill: $green-color;
             }
@@ -41,7 +41,7 @@
     &__link{
         background: none;
         border: 0;
-        &:hover{
+        &:hover, &:focus, &:active{
             svg, path{
                 fill: $green-color;
             }

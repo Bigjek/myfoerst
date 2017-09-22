@@ -12,15 +12,19 @@ body{
 h1{
     @include sansus(w);
     font-size: 63px;
-    padding: 70px 0;
 }
 h2{
     @include sansus(w);
     font-size: 35px;
-    padding-bottom: 40px;
 }
 input, button, textarea{
     outline: none;
+    border: 1px solid #fff;
+}
+input, button, textarea{
+    &:focus{
+        border: 1px solid #7ba5ff;
+    }
 }
 ul, blockquote{
     margin: 0;
@@ -39,6 +43,16 @@ p{
 }
 .footer {
     flex: 0 0 auto;
+}
+.visually-hidden {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
 }
 // color
 $green-color:  #4e8839;

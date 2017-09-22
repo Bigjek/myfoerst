@@ -6,11 +6,11 @@
         padding: 15px 25px;
         border-radius: 25px; 
         color: white;
-        margin: 0 10px;
         text-decoration: none;
         &_opacity{
             background: none;
             border: 1px solid white;
+            margin: 0 10px; 
             &:hover, &:active, &:focus{
                 background: $green-color;
                 border: 1px solid $green-color;
@@ -55,7 +55,7 @@
             padding-bottom: 30px;
             margin-bottom: 30px;
             &:before{
-                background: #fff;
+                background: currentColor;
             }
         }
         &_gray{
@@ -78,6 +78,9 @@
                 background: $gray-h1;
             }
         }
+        &_s{
+            font-size: 63px;
+        }
     }
 }
 .form{
@@ -94,9 +97,8 @@
     }
     &-contact{
         &__name, &__email, &__text{
-            padding: 14px 20px;
+            padding: 12px 20px;
             line-height: normal;
-            border: none;
             width: 87%;
             &_b{
                 width: 100%;
@@ -167,7 +169,7 @@
                   position: absolute;
                   top: 2px;
                   left: 5px;
-                  border: 3px solid white;
+                  border: 3px solid currentColor;
                   border-top: none;
                   border-right: none;
                   background: transparent;
@@ -183,7 +185,7 @@
                     position: absolute;
                     left: 0;
                     bottom: 1px;
-                    background-color: white;
+                    background-color: currentColor;
                 }
             }
             
@@ -227,7 +229,7 @@
                     margin-right: 10px;
                     position: absolute;
                     left: 0;
-                    background-color: white;
+                    background-color: currentColor;
                 }
             }
         }
@@ -235,10 +237,12 @@
 }
 .input{
     &-group{
-       position: relative;
-       margin-bottom: 20px;
-       @include roboto(r);
-       font-size: 16px;
+        position: relative;
+        @include roboto(r);
+        font-size: 16px;
+        &__block{
+            margin-bottom: 20px;    
+        }
         &__icon{
             width: 100%;
             background: #f0efe9;

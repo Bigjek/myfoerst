@@ -38,7 +38,7 @@
             @include roboto(m);
             font-size: 16px;
             text-decoration: none;
-            color: white;
+            color: currentColor;
         }
     }
     &-social{
@@ -58,7 +58,7 @@
             padding-bottom: 40px;
         }
         &-copyright{
-            color:white;
+            color:currentColor;
             @include roboto(l);
             font-size: 16px;
             line-height: 1;
