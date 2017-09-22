@@ -1,18 +1,7 @@
-header.header
-    .container
-        .header__top
-            ul.social
-                each i in social
-                    +svg(i.url, i.class_name, i.name)
-            .menu
-                a.menu__link(href="#") 
-                    include ../../img/icons/hamburger.svg
-        .header__block
-            .header__content
-                .header__content-img
-                    img(src="", alt="")
-                .header__content-title Евгений Кочешков
-                    p Личный сайт веб разработчика
-                .header__content-down
-                    a.down-link
-        
+ul.web
+    each i in social
+        +svg(i.url, i.class_name, i.name)
+.menu
+    button.menu__link 
+        svg(class="icon" width="40" height="40")
+            use(xlink:href="assets/img/sprite.svg#hamburger") 

@@ -7,19 +7,56 @@
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
-    <link rel="stylesheet" href="./assets/styles/main.min.css">
-    <script src="./assets/scripts/main.js" defer></script>
+    <link rel="stylesheet" href="./assets/styles/main.min.css"><!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
     <div class="wrapper">
-      <h1>Главная</h1>
-      <form>
-        <label for="email"> </label>
-        <input name="email" id="email">
-        <label for="password"> </label>
-        <input name="password" id="password">
-        <button>Войти</button>
-      </form>
+      <div class="header-login">
+        <div class="header-login__btn"><a class="btn-link btn-link_opacity" href="user.html">Авторизоваться</a></div>
+      </div>
+      <main class="main">
+        <div class="main-center">
+          <div class="main-center__content">
+            <div class="user main__user">
+              <div class="user__block-images"><img class="user__image" src="./assets/img/logo.jpg" alt="logo"></div>
+              <div class="user__description">
+                <div class="user__name">Евгений Кочешков</div>
+                <div class="user__info">Личный сайт веб разработчика</div>
+              </div>
+            </div>
+            <ul class="web main-web">
+              <li class="web__items"><a class="web__link" href="https://vk.com" target="_blank">
+                  <svg class="icon-svg">
+                    <use xlink:href="assets/img/sprite.svg#vk"></use>
+                  </svg></a></li>
+              <li class="web__items"><a class="web__link" href="https://github.com/Bigjek" target="_blank">
+                  <svg class="icon-svg">
+                    <use xlink:href="assets/img/sprite.svg#github"></use>
+                  </svg></a></li>
+              <li class="web__items"><a class="web__link" href="#" target="_blank">
+                  <svg class="icon-svg">
+                    <use xlink:href="assets/img/sprite.svg#in"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+          <div class="main-center__footer">
+            <nav class="navigate">
+              <ul class="navigate__block">
+                <li class="navigate__item"><a class="navigate__link" href="my-works.html">Мои работы</a></li>
+                <li class="navigate__item"><a class="navigate__link" href="about.html">Обо мне</a></li>
+                <li class="navigate__item"><a class="navigate__link" href="my-blog.html">Блог</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__bottom footer__bottom_opacity"> 
+          <div class="footer__bottom-copyright">© Евгений Кочешков | Создано с любовью в LoftSchool | 2017</div>
+        </div>
+      </footer>
     </div>
   </body>
+  <script src="./assets/scripts/main.js" defer></script>
 </html>

@@ -1,9 +1,41 @@
-.icon-svg{
-    width: 32px;
-    height: 22px;
+.icon {
+    line-height: 2rem;
+    display: inline-block;
+    vertical-align: middle;
     fill: #FFFFFF;
     cursor: pointer;
     &:hover{
-        fill: $green-color
+        fill: $green-color;
+    }
+    &-svg{
+        width: 32px;
+        height: 22px;
+        fill: white;
+        cursor: pointer;
+        &:hover{
+            fill: $green-color;
+        }
+    }
+    &-lite, &-green, &-green-lite{
+        line-height: 2rem;
+        display: inline-block;
+        vertical-align: middle;
+        position: absolute;
+    }
+    &-lite{
+        fill: rgba(74, 152, 200, 0.25);
+        z-index: -1;
+    }
+    &-green{
+        fill: #e2ebd0;
+        z-index: 0;
+    }
+    &-white{
+        fill: currentColor;
+        position: absolute;
+    }
+    &-green-lite{
+        fill: $green-color;
+        z-index: 0;
     }
 }

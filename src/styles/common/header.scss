@@ -5,19 +5,30 @@
     &__block{
         
     }
+    &-login{
+        display: flex;
+        justify-content: flex-end;
+        flex: 0 0 auto;
+        &__btn{
+            margin: 20px 10px 0 0;
+        }
+    }
+    &__user{
+        margin:68px auto 0;
+    }
 }
-.social{
+.web{
     padding: 0;
     list-style: none;
     display: inline-block;
     margin: 0;
     &__items{
         display: inline-block;
-        padding: 0 14px;
+        padding: 0 10px;
     }
     &__link{
         vertical-align: middle;
-        &:hover{
+        &:hover, &:focus, &:active{
             svg, path{
                 fill: $green-color;
             }
@@ -28,10 +39,15 @@
     display: inline-block;
     float: right;
     &__link{
-        &:hover{
+        background: none;
+        border: 0;
+        &:hover, &:focus, &:active{
             svg, path{
                 fill: $green-color;
             }
+        }
+        &_modal{
+            margin: 28px 28px 0 0;
         }
     }   
 }
