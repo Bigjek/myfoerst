@@ -3,8 +3,8 @@ mixin navItemFooter(url, name)
         a.footer-menu__link(href=url)= name
 
 mixin svg(url, class_name, name)
-    li.web__items
-        a(href=url class='web__link' target="_blank")
+    li.web__items.web__items_l
+        a(href=url class='web__link web__link_l' target="_blank")
             svg(class=class_name)
                 use(xlink:href=name)
 

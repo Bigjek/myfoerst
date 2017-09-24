@@ -1,6 +1,23 @@
 .header{
     &__top{
-        padding: 28px;
+        padding: 20px 15px;
+        @include desktop{
+            
+        }
+        @include laptop{
+            padding: 35px 15px;
+        }
+        @include ipad{
+        
+        }
+        @include iphone{
+        
+        }
+        &_p{
+            @include iphone{
+                padding: 10px;
+            }  
+        }
     }
     &__block{
         
@@ -14,7 +31,19 @@
         }
     }
     &__user{
-        margin:68px auto 0;
+        margin: 68px auto 0;
+        @include desktop{
+            margin-top: 70px;
+        }
+        @include laptop{
+        
+        }
+        @include ipad{
+        
+        }
+        @include iphone{
+            margin-top: 68px;
+        }
     }
 }
 .web{
@@ -25,9 +54,40 @@
     &__items{
         display: inline-block;
         padding: 0 10px;
+        @include desktop{
+        }
+        @include laptop{
+        
+        }
+        @include ipad{
+        
+        }
+        @include iphone{
+        
+        }
+        &_l{
+            padding-left: 10px; 
+            @include desktop{
+                padding-left: 0;
+            }
+            @include iphone{
+                padding: 0;
+            }
+        }
     }
     &__link{
         vertical-align: middle;
+        @include desktop{
+        }
+        @include laptop{
+        
+        }
+        @include ipad{
+        
+        }
+        @include iphone{
+            padding: 0 13px;
+        }
         &:hover, &:focus, &:active{
             svg, path{
                 fill: $green-color;
@@ -41,13 +101,49 @@
     &__link{
         background: none;
         border: 0;
+        &_b{
+            position: relative;
+            top: -5px;
+            @include desktop{
+                
+            }
+            @include laptop{
+            
+            }
+            @include ipad{
+            
+            }
+            @include iphone{
+                .icon{
+                    width: 28px;
+                    height: 28px;
+                }
+            }
+        }
         &:hover, &:focus, &:active{
             svg, path{
                 fill: $green-color;
             }
+            
         }
         &_modal{
             margin: 28px 28px 0 0;
+            @include desktop{
+                margin: 15px 15px 0 0;
+            }
+            @include laptop{
+                margin-top: 30px;
+            }
+            @include ipad{
+            
+            }
+            @include iphone{
+                margin: 10px 10px 0 0;
+                .icon{
+                    width: 25px;
+                    height: 25px;
+                }
+            }
         }
     }   
 }

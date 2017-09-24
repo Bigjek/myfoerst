@@ -7,22 +7,78 @@
         flex-flow: row wrap;
         padding: 30px 0;
         background: $gray-color-alf;
+        @include desktop{
+            padding: 20px 0 40px;
+        }
+        @include laptop{
+            padding: 25px 0 20px;
+        }
+        @include ipad{
+        
+        }
+        @include iphone{
+            padding: 10px 0 0px;
+            text-align: center;
+        }
     }
     &__quote,  &__menu, &__info{
         flex: 1 1 250px;
         padding: 0 30px; 
+        @include iphone{
+            padding: 0 15px;    
+        }
     }
     &__info{
         @include roboto(l);
-        font-size: 16px
     }
     &__menu{
         border-right: 1px solid $gray-border;
         border-left: 1px solid $gray-border;
+        @include iphone{
+            border: 0;
+            position: relative;
+            padding-bottom: 10px;
+            &:before, &:after{
+                content: "";
+                width: 94%;
+                height: 1px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: 0px auto;
+                background: $gray-border
+            } 
+            &:before{
+                top: 0;
+            }
+            &:after{
+                bottom: 0;
+            } 
+        }
+        
     }
     &__quote{
         blockquote{
             @include roboto(li);
+        }
+        &_author{
+            font-weight: 700;
+        }
+        &_block{
+            @include desktop{
+                
+            }
+            @include laptop{
+            
+            }
+            @include ipad{
+                margin-top: 38px;
+            }
+            @include iphone{
+                margin-top: 12px;
+                margin-bottom: 10px;
+                line-height: 1.8;
+            }
         }
     }
     &-menu{
@@ -30,15 +86,53 @@
         display: flex;
         justify-content: space-between; 
         margin-bottom: 15px; 
+        @include desktop{
+            margin-bottom: 25px;
+            justify-content: flex-start;
+        }
+        @include laptop{
+            margin-bottom: 20px;
+        }
+        @include ipad{
+        
+        }
+        @include iphone{
+            margin-bottom: 12px;
+            margin-top: 10px;
+        }
         &__item{
             display: inline-block;
             padding: 0 5px;
+            @include desktop{
+                padding: 0 39px 0 0;
+            }
+            @include laptop{
+                padding: 0 5px;
+            }
+            @include ipad{
+                padding: 0;
+            }
+            @include iphone{
+                padding: 0;
+            }
         }
         &__link{
             @include roboto(m);
             font-size: 16px;
             text-decoration: none;
             color: currentColor;
+            @include desktop{
+                
+            }
+            @include laptop{
+            
+            }
+            @include ipad{
+                font-size: 14px;
+            }
+            @include iphone{
+                font-size: 14px;
+            }
         }
     }
     &-social{
@@ -53,6 +147,9 @@
         background: $green-alf;
         text-align: center;
         padding: 12px 0px;
+        @include iphone{
+            padding: 8px 0px;
+        }
         &_opacity{
             background: none;
             padding-bottom: 40px;
@@ -60,8 +157,10 @@
         &-copyright{
             color:currentColor;
             @include roboto(l);
-            font-size: 16px;
             line-height: 1;
+            @include iphone{
+                line-height: 1.7;
+            }
         }
     }
 }

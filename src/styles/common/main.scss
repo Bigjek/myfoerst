@@ -5,12 +5,17 @@ html{
     @include laptop{
         font-size: 15px;
     }
-    @include tablets{
+    @include ipad{
         font-size: 14px;
     }
-    @include phones{
-        font-size: 13px;
+    @include iphone{
+        font-size: 14px;
     }
+}
+.text-content{
+    @include roboto(r);
+    color: $gray-h2;
+    line-height: 1.5;
 }
 .main{
     display: flex;
@@ -51,17 +56,75 @@ html{
         &_l{
             line-height: 1.3;
             text-align: center;
-            margin: 16px 0 -15px;
+            margin: 20px 0 -15px;
+            @include desktop{
+                
+            }
+            @include laptop{
+            
+            }
+            @include ipad{
+            
+            }
+            @include iphone{
+                line-height: 1.6;
+                margin: 22px 0 -15px;
+            }
         }
     }
     &-description{
+       
         &__image{
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
+            @include desktop{
+                
+            }
+            @include laptop{
+                margin-bottom: 30px;                
+            }
+            @include ipad{
+                margin-bottom: 35px;
+            }
+            @include iphone{
+                margin-bottom: 10px;
+            }
         }
         &__avatar{
-            max-width: 440px;
+            max-width: 470px;
             width: 100%;
+            padding: 0 20px;
+            @include desktop{
+                
+            }
+            @include laptop{
+                padding: 0;
+            }
+            @include ipad{
+            
+            }
+            @include iphone{
+            
+            }
+        }
+        &__text{
+            padding: 0 20px; 
+            @include desktop{
+            
+            }
+            @include laptop{
+                line-height: 1.6;
+            }
+            @include ipad{
+                line-height: 1.6;
+            }
+            @include iphone{
+                line-height: 1.6;
+                padding: 0 10px;
+            }
+        }
+        &__title{
+            padding: 0 20px; 
         }
 
     }
@@ -71,6 +134,18 @@ html{
         color:white;
         &_size{
             font-size: 35px;
+            @include desktop{
+                
+            }
+            @include laptop{
+            
+            }
+            @include ipad{
+            
+            }
+            @include iphone{
+                font-size: 22px
+            }
         }
         &_max{
             text-transform: uppercase;
@@ -95,7 +170,6 @@ html{
     }
     &__info{
         @include roboto(r);
-        font-size: 16px;
         color:white
     }
     
@@ -138,6 +212,18 @@ html{
         align-content: space-between;
         justify-content: space-between;
         flex-flow: row nowrap;
+        @include desktop{
+            
+        }
+        @include laptop{
+        
+        }
+        @include ipad{
+            flex-flow: column nowrap;
+        }
+        @include iphone{
+            flex-flow: column nowrap;
+        }
     }
     &__left, &__right{
         width: 50%;
@@ -145,13 +231,124 @@ html{
     &__right{
         background: $biege-l;
         padding: 15px 40px 20px;
+        @include desktop{
+            padding-top: 0;
+        }
+        @include laptop{
+            padding: 15px 0 20px 35px;
+        }
+        @include ipad{
+            width: 100%;
+            display: block;
+            padding: 52px 0 20px 0;
+        }
+        @include iphone{
+            width: 100%;
+            display: block;
+            padding: 52px 0 0 0;
+        }
+        &-content{
+            @include desktop{
+                
+            }
+            @include laptop{
+            
+            }
+            @include ipad{
+                text-align: center;
+            }
+            @include iphone{
+                text-align: center;
+            }
+        }
         &-text{
             margin-bottom: 50px;
+            @include desktop{
+                
+            }
+            @include laptop{
+            
+            }
+            @include ipad{
+                margin-bottom: 45px;
+                max-width: 470px;
+                margin: 0 auto;
+            }
+            @include iphone{
+                margin-bottom: 45px;
+                max-width: 470px;
+                margin: 0 auto;
+                padding: 0 10px;
+            }
+        }
+        &-title{
+            @include desktop{
+                max-width: 320px;
+                margin: 0 auto;
+            }
+            @include laptop{
+                max-width: 470px;
+                margin: 0 auto;
+            }
+            @include ipad{
+                max-width: 470px;
+                margin: 0 auto;
+            }
+            @include iphone{
+                max-width: 470px;
+                margin: 0 auto;
+            }
         }
     }
     &__left{
         background: $biege;
         padding: 15px 80px 20px;
+        @include desktop{
+            display: flex;
+            padding: 8px 0 20px;
+        }
+        @include laptop{
+            display: block;
+            padding: 22px 78px 20px 70px;
+        }
+        @include ipad{
+            width: 100%;
+            display: block;
+            padding: 45px 120px 20px 120px;
+        }
+        @include iphone{
+            width: 100%;
+            display: block;
+            padding: 23px 0 20px 0;
+        }
+        &-title{
+            @include desktop{
+                width: 45%;
+            }
+            @include laptop{
+                width: 100%;
+            }
+            @include ipad{
+            
+            }
+            @include iphone{
+            
+            }
+        }
+        &-content{
+            @include desktop{
+                width: 55%;
+            }
+            @include laptop{
+                width: 100%;
+            }
+            @include ipad{
+            
+            }
+            @include iphone{
+            
+            }
+        }
     }
 
 }
@@ -161,6 +358,18 @@ html{
     .right{
         width: 50%;
         fill: $biege-l;
+        @include desktop{
+            
+        }
+        @include laptop{
+        
+        }
+        @include ipad{
+            fill: $biege; 
+        }
+        @include iphone{
+            fill: $biege; 
+        }
     }
     .left{
         width: 50%;
@@ -180,15 +389,13 @@ html{
         position: relative;
         top: -45px;
         margin: 0 auto;
+        @include iphone{
+            top: -20px;
+        }
         &_m{
             top: -20px;
         }
     }
-}
-.text-content{
-    @include roboto(r);
-    color: $gray-h2;
-    line-height: 1.6;
 }
 .map{
     &__contacts{
@@ -197,6 +404,19 @@ html{
         justify-content: center;
         flex: 1 0 auto;
         min-height: 925px;
+        @include desktop{
+            
+        }
+        @include laptop{
+            min-height: 555px;
+        }
+        @include ipad{
+            min-height: 630px;
+        }
+        @include iphone{
+            align-items: flex-start;
+            min-height: 785px;
+        }
     }
 }
 .contacts{
@@ -206,6 +426,21 @@ html{
     border-radius: 5px;
     overflow: hidden;
     padding: 25px 40px;
+    @include desktop{
+        
+    }
+    @include laptop{
+    
+    }
+    @include ipad{
+        min-width: 350px;
+        padding: 30px 20px;
+    }
+    @include iphone{
+        min-width: 100%;
+        padding: 22px 25px;
+        border-radius: 0;
+    }
     &__list{
         list-style: none;
         padding: 0;
@@ -216,6 +451,9 @@ html{
     }
     &__item{
         padding: 12px 0;
+        @include iphone{
+          padding: 14px 0;  
+        }   
     }
     &__block{
         padding-left: 35px;
@@ -271,9 +509,34 @@ html{
     &__center{
         background: $biege-l;
         display: flow-root;
+        @include desktop{
+            
+        }
+        @include laptop{
+        
+        }
+        @include ipad{
+        
+        }
+        @include iphone{
+            display: block;
+            padding: 25px 0 1px 0;
+        }
     }
     &__title{
-        margin-top: 35px;
+        margin-top: 54px;
+        @include desktop{
+            
+        }
+        @include laptop{
+            margin-top: 35px;
+        }
+        @include ipad{
+            margin-top: 35px;
+        }
+        @include iphone{
+            margin-top: 10px;
+        }
     }
     &__block{
         display: flex;
@@ -304,12 +567,36 @@ html{
     padding-top: 55px;
     background: url('../img/bg_works.jpg') center no-repeat;
     background-size: cover;
+    @include desktop{
+        padding-top: 75px;
+    }
+    @include laptop{
+    
+    }
+    @include ipad{
+    
+    }
+    @include iphone{
+    
+    }
     &-center{
         &__form{
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: 680px;
+            @include desktop{
+                min-height: 600px;
+            }
+            @include laptop{
+            
+            }
+            @include ipad{
+            
+            }
+            @include iphone{
+            
+            }
         }
         &__content{
             display: flex;
@@ -362,6 +649,18 @@ html{
             height: 77px;
             border-radius: 50%;
             overflow: hidden;
+            @include desktop{
+                
+            }
+            @include laptop{
+            
+            }
+            @include ipad{
+            
+            }
+            @include iphone{
+            
+            }
         }
         &__img{
             width: 100%;

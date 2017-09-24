@@ -12,7 +12,7 @@ block content
     main.login
         .main-center
             .main-center__content
-                form.form-login(action="#")
+                form.form-contact(action="#")
                     h2.block-subtitle.block-subtitle_white Авторизуйтесь
                     .input-group.input-group__block
                         .input-group__icon
@@ -32,7 +32,8 @@ block content
                         input.form-contact__check(type="checkbox" name="children" id="children" checked)
                         label.form-contact__check-label(for="children") Я человек
                     .input-group.input-group__block
-                        .form-login__check Вы точно не робот?
+                        .form-login
+                            .form-login__check Вы точно не робот?
                         input.form-contact__radio(type="radio" name="robot" value="1" id="yes" checked) 
                         label.form-contact__radio-label(for="yes") Да
                         input.form-contact__radio(type="radio" name="robot" value="0" id="no") 

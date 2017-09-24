@@ -12,6 +12,19 @@
         height: 22px;
         fill: white;
         cursor: pointer;
+        @include desktop{
+            
+        }
+        @include laptop{
+        
+        }
+        @include ipad{
+        
+        }
+        @include iphone{
+            width: 23px;
+            height: 23px;
+        }
         &:hover{
             fill: $green-color;
         }
@@ -29,6 +42,9 @@
     &-green{
         fill: #e2ebd0;
         z-index: 0;
+        @include iphone{
+            height: 80px;
+        }
     }
     &-white{
         fill: currentColor;
