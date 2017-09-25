@@ -72,7 +72,13 @@
             }
             @include iphone{
                 padding: 0;
+                &:first-child{
+                    .web__link_l{
+                        padding-left: 0;
+                    }
+                }
             }
+            
         }
     }
     &__link{
@@ -114,6 +120,8 @@
             
             }
             @include iphone{
+                top: -2px;
+                padding: 0;
                 .icon{
                     width: 28px;
                     height: 28px;
@@ -138,7 +146,7 @@
             
             }
             @include iphone{
-                margin: 10px 10px 0 0;
+                margin: 10px 25px 0 0;
                 .icon{
                     width: 25px;
                     height: 25px;

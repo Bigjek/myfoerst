@@ -520,7 +520,7 @@ html{
         }
         @include iphone{
             display: block;
-            padding: 25px 0 1px 0;
+            padding: 13px 0 1px 0;
         }
     }
     &__title{
@@ -532,7 +532,7 @@ html{
             margin-top: 35px;
         }
         @include ipad{
-            margin-top: 35px;
+            margin-top: 40px;
         }
         @include iphone{
             margin-top: 10px;
@@ -592,10 +592,11 @@ html{
             
             }
             @include ipad{
-            
+                min-height: 570px;
             }
             @include iphone{
-            
+                min-height: 490px;
+                padding: 0 10px;
             }
         }
         &__content{
@@ -613,6 +614,16 @@ html{
         display: flex;
         justify-content: center;
         align-items: center;
+        @include desktop{
+        }
+        @include laptop{
+        }
+        @include ipad{
+            flex-flow: column nowrap;
+        }
+        @include iphone{
+            flex-flow: column nowrap;
+        }
         &__item{
             max-width: 400px;
             width: 100%;
@@ -625,6 +636,16 @@ html{
             color: $green-color;
             text-align: center;
             display: block;
+            @include desktop{
+            }
+            @include laptop{
+            }
+            @include ipad{
+                line-height: 1.6;
+            }
+            @include iphone{
+                line-height: 1.6;
+            }
         }
         &__status{
             text-align: center;
@@ -641,6 +662,24 @@ html{
             &_s{
                 position: relative;
                 z-index: 1;
+                @include desktop{
+                }
+                @include laptop{
+                }
+                @include ipad{
+                    margin-bottom: 28px;
+                    line-height: 1.7;
+                    p{
+                        margin-bottom: 10px;
+                    }
+                }
+                @include iphone{
+                    margin-bottom: 28px;
+                    line-height: 1.7;
+                    p{
+                        margin-bottom: 10px;
+                    }
+                }
             }
         }
         &__images{
@@ -656,10 +695,12 @@ html{
             
             }
             @include ipad{
-            
+                width: 50px;
+                height: 50px;
             }
             @include iphone{
-            
+                width: 50px;
+                height: 50px;
             }
         }
         &__img{

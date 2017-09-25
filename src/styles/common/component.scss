@@ -111,7 +111,7 @@
                 font-size: 50px;
                 padding-bottom: 15px;
                 max-width: 100%;
-                letter-spacing: 1px;
+                letter-spacing: -1px;
             }
             @include iphone{
                 font-size: 35px;
@@ -123,6 +123,34 @@
         }
         &_s{
             font-size: 63px;
+            @include desktop{
+            }
+            @include laptop{
+            }
+            @include ipad{
+                font-size: 50px;
+                max-width: 425px;
+            }
+            @include iphone{
+                font-size: 36px;
+                max-width: 305px;
+                padding-bottom: 24px;
+                margin-bottom: 18px;
+            }
+        }
+        &_f{
+            @include desktop{
+            }
+            @include laptop{
+            }
+            @include ipad{
+                letter-spacing: 1px;
+                margin-bottom: 23px;
+            }
+            @include iphone{
+                letter-spacing: 1px;
+                margin-bottom: 23px;
+            }
         }
     }
 }
@@ -143,6 +171,15 @@
             padding: 12px 20px;
             line-height: normal;
             width: 87%;
+            @include desktop{
+            }
+            @include laptop{
+            }
+            @include ipad{
+            }
+            @include iphone{
+                font-size: 14px;
+            }
             &_b{
                 width: 100%;
                 border-radius: 25px;
@@ -151,6 +188,16 @@
         }
         &__top{
             padding: 40px 20px 0;
+            @include desktop{
+            }
+            @include laptop{
+            }
+            @include ipad{
+                padding: 35px 20px 0;
+            }
+            @include iphone{
+                padding: 30px 20px 0;
+            }
         }
         &_w{
             max-width: 380px;
@@ -158,6 +205,20 @@
             width: 100%;
             overflow: hidden;
             border-radius: 7px;
+            @include desktop{
+            }
+            @include laptop{
+            }
+            @include ipad{
+                max-width: 350px;
+                position: relative;
+                top: -23px;
+            }
+            @include iphone{
+                max-width: 350px;
+                position: relative;
+                top: -23px;
+            }
         }
         &__btn{
             display: flex;
