@@ -39,7 +39,15 @@ html{
     align-items: center;
     justify-content: center;
     flex: 1 0 auto;
-    
+    @include desktop{
+    }
+    @include laptop{
+    }
+    @include ipad{
+    }
+    @include iphone{
+        padding: 0 10px 40px 10px;
+    }
 }
 .user{
     width: 100%;

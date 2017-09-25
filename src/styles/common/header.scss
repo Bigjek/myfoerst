@@ -1,11 +1,12 @@
 .header{
     &__top{
-        padding: 20px 15px;
+        display: flex;
+        padding: 20px 0;
         @include desktop{
             
         }
         @include laptop{
-            padding: 35px 15px;
+
         }
         @include ipad{
         
@@ -15,7 +16,7 @@
         }
         &_p{
             @include iphone{
-                padding: 10px;
+                padding: 10px 0;
             }  
         }
     }
@@ -28,6 +29,15 @@
         flex: 0 0 auto;
         &__btn{
             margin: 20px 10px 0 0;
+            @include desktop{
+            }
+            @include laptop{
+            }
+            @include ipad{
+            }
+            @include iphone{
+                margin: 20px auto;
+            }
         }
     }
     &__user{
@@ -48,9 +58,6 @@
 }
 .web{
     padding: 0;
-    list-style: none;
-    display: inline-block;
-    margin: 0;
     &__items{
         display: inline-block;
         padding: 0 10px;
@@ -68,15 +75,9 @@
         &_l{
             padding-left: 10px; 
             @include desktop{
-                padding-left: 0;
             }
             @include iphone{
                 padding: 0;
-                &:first-child{
-                    .web__link_l{
-                        padding-left: 0;
-                    }
-                }
             }
             
         }
@@ -102,14 +103,14 @@
     }
 }
 .menu{
-    display: inline-block;
-    float: right;
+    margin-left: auto;
     &__link{
         background: none;
         border: 0;
         &_b{
             position: relative;
             top: -5px;
+            right: 10px;
             @include desktop{
                 
             }
@@ -146,7 +147,7 @@
             
             }
             @include iphone{
-                margin: 10px 25px 0 0;
+                margin: 10px 10px 0 0;
                 .icon{
                     width: 25px;
                     height: 25px;

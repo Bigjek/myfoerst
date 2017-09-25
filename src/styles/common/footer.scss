@@ -22,8 +22,12 @@
         }
     }
     &__quote,  &__menu, &__info{
-        flex: 1 1 250px;
+        flex: 1 1 260px;
         padding: 0 30px; 
+        @include ipad{
+            padding: 0 15px; 
+            flex: 1 1 190px;
+        }
         @include iphone{
             padding: 0 15px;    
         }
@@ -94,7 +98,8 @@
             margin-bottom: 20px;
         }
         @include ipad{
-        
+            display: flex;
+            justify-content: space-around;
         }
         @include iphone{
             margin-bottom: 12px;
@@ -110,7 +115,7 @@
                 padding: 0 5px;
             }
             @include ipad{
-                padding: 0;
+                padding: 0 5px;
             }
             @include iphone{
                 padding: 0;
@@ -121,6 +126,7 @@
             font-size: 16px;
             text-decoration: none;
             color: currentColor;
+            white-space: nowrap;
             @include desktop{
                 
             }
@@ -152,7 +158,7 @@
         }
         &_opacity{
             background: none;
-            padding-bottom: 40px;
+            // padding-bottom: 40px;
         }
         &-copyright{
             color:currentColor;
