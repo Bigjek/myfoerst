@@ -22,15 +22,30 @@ html{
     align-items: center;
     justify-content: center;
     flex: 1 0 auto;
+    perspective: 1200;
+    transform-style: preserve-3d;
+    @include desktop{
+    }
+    @include laptop{
+    }
+    @include ipad{
+    }
+    @include iphone{
+        padding: 0 10px 40px 10px;
+    }
     &-center{
-        background: rgba(0, 0, 0, 0.45);
         max-width: 380px;
         width: 100%;
         text-align: center;
-        border-radius: 5px;
-        overflow: hidden;
+        position: relative;
         &__content{
-            padding: 40px 20px;
+            padding: 40px 20px 0px;
+            &_b{
+                padding-bottom: 1px;
+            }
+            &_f{
+                padding-bottom: 40px;
+            }
         }
     }
 }
@@ -52,6 +67,16 @@ html{
 .user{
     width: 100%;
     min-width: 340px;
+    @include desktop{
+    }
+    @include laptop{
+    }
+    @include ipad{
+        min-width: 100%;
+    }
+    @include iphone{
+        min-width: 100%;
+    }
     &__block-images{
         text-align: center;
     }
@@ -140,6 +165,15 @@ html{
         @include roboto(m);
         font-size: 28px;
         color:white;
+        @include desktop{
+        }
+        @include laptop{
+        }
+        @include ipad{
+        }
+        @include iphone{
+            font-size: 21px;
+        }
         &_size{
             font-size: 35px;
             @include desktop{
@@ -203,11 +237,19 @@ html{
         color: white;
         text-decoration: none;
         @include roboto(m);
-        font-size: 16px; 
         display: block;
         padding: 14px;
         background: $green; 
         width: 100%;
+        @include desktop{
+        }
+        @include laptop{
+        }
+        @include ipad{
+        }
+        @include iphone{
+            padding: 14px 0;
+        }
         &:hover, &:active, &:focus{
             background: $green-color;
         }
@@ -571,10 +613,12 @@ html{
         justify-content: center;
     }
 }
+.form-contact_w:before{
+    background: url('../img/bg_works.jpg') center / cover fixed;
+}
 .speak{
     padding-top: 55px;
-    background: url('../img/bg_works.jpg') center no-repeat;
-    background-size: cover;
+    background: url('../img/bg_works.jpg') center 0/cover ;
     @include desktop{
         padding-top: 75px;
     }

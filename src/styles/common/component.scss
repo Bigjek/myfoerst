@@ -163,7 +163,7 @@
             @include roboto(b);
         }
         > div:last-child{
-            margin-bottom: 0;
+            // margin-bottom: 0;
         }
     }
     &-contact{
@@ -189,6 +189,7 @@
         }
         &__top{
             padding: 40px 20px 0;
+
             @include desktop{
             }
             @include laptop{
@@ -202,22 +203,32 @@
         }
         &_w{
             max-width: 380px;
-            background: rgba(222, 222, 222, 0.45);
             width: 100%;
             overflow: hidden;
             border-radius: 7px;
+            position: relative;
+            z-index: 1;
+            &:before{
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+                filter: blur(10px);
+                margin: -30px;
+            }
             @include desktop{
             }
             @include laptop{
             }
             @include ipad{
                 max-width: 350px;
-                position: relative;
                 top: -23px;
             }
             @include iphone{
                 max-width: 350px;
-                position: relative;
                 top: -23px;
             }
         }
@@ -344,7 +355,6 @@
     &-group{
         position: relative;
         @include roboto(r);
-        font-size: 16px;
         &__block{
             margin-bottom: 20px;    
         }
@@ -356,8 +366,7 @@
         }    
         &__login, &__pass{
             display: inline-block;
-            width: 10%;
-            min-width: 40px;
+            width: 11%;
             .icon{
                 fill: #c4cbcd;
             }
@@ -750,4 +759,28 @@
     left: 0;
     right: 0;
     z-index: -1;
+}
+.flipper{
+    transform-style: preserve-3d;
+    transition: .7s linear;  
+    position: relative;
+    &.active{
+        transform: rotateY(180deg);
+    }
+}
+.front, .back{
+    backface-visibility: hidden;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.front {
+    z-index: 10;
+    transform: rotateY(0deg) translateZ(10px);
+}
+.back {
+    transform: rotateY(-180deg);
+    position: absolute;
+    top: 0;
+    width: 100%;
 }

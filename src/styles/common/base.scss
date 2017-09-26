@@ -6,8 +6,7 @@ body{
     height: 100%;
 }
 body{
-    background: url('../img/water.jpg') no-repeat center center fixed; 
-    background-size: cover;
+    background: url('../img/water.jpg') 0/cover fixed; 
 }
 h1{
     @include sansus(w);
