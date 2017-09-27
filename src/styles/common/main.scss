@@ -574,7 +574,7 @@ html{
                     width: 100%;
                     background: $green;
                     &.active{
-                        left: -45px;
+                        left: -70px;
                     }
                     .aside-menu{
                         overflow-y: auto;
@@ -583,7 +583,9 @@ html{
                     }
                 }
                 @include iphone{
-                   
+                    &.active{
+                        left: -45px;
+                    }
                 }
             }
         }
