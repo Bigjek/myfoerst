@@ -40,6 +40,17 @@ html{
         position: relative;
         &__content{
             padding: 40px 20px 0px;
+           
+            @include desktop{
+            }
+            @include laptop{
+            }
+            @include ipad{
+                min-width: 348px;
+            }
+            @include iphone{ 
+                min-width: 300px;
+            }
             &_b{
                 padding-bottom: 1px;
             }
@@ -249,6 +260,10 @@ html{
         }
         @include iphone{
             padding: 14px 0;
+        }
+        &_style{
+            border: 0;
+            cursor: pointer;
         }
         &:hover, &:active, &:focus{
             background: $green-color;
@@ -527,6 +542,17 @@ html{
         &__right{
             width: 66.6%;
             padding: 60px 90px 20px 10px;
+            @include desktop{
+            }
+            @include laptop{
+            }
+            @include ipad{
+                width: 100%;
+                padding: 60px 25px 20px 25px;
+            }
+            @include iphone{
+                padding: 60px 10px 20px 10px;
+            }
             &-text{
                 margin-bottom: 50px;
             }
@@ -534,15 +560,51 @@ html{
         &__left{
             width: 33.3%;
             padding: 55px 90px 20px 10px;
+            &_toggle{
+                @include desktop{
+                }
+                @include laptop{
+                }
+                @include ipad{
+                    position: fixed;
+                    top: 0;
+                    bottom: 0;
+                    left: -100%;
+                    padding: 18px 18px 18px 45px;
+                    width: 100%;
+                    background: $green;
+                    &.active{
+                        left: -45px;
+                    }
+                    .aside-menu{
+                        overflow-y: auto;
+                        overflow-x: hidden;
+                        height: 100%;
+                    }
+                }
+                @include iphone{
+                   
+                }
+            }
         }
    }
    &-description{
-       padding-bottom: 70px;
-       margin-bottom: 65px;
-       border-bottom: 5px solid #ecebe4;
+        padding-bottom: 70px;
+        margin-bottom: 65px;
+        border-bottom: 5px solid #ecebe4;
        &__title{
-           margin: 0;
+            margin: 0;
             padding-bottom: 20px;
+            @include desktop{
+            }
+            @include laptop{
+            }
+            @include ipad{
+                font-size: 30px;
+            }
+            @include iphone{
+                font-size: 21px;
+            }
        }
        &__date{
             color: $green-color;

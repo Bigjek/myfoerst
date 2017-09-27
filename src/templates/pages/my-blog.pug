@@ -25,7 +25,8 @@ block content
       h2.visually-hidden Список статей которые я написал
       +tringleBox(box)
       .blog-block
-        aside.blog-block__left
+        aside.blog-block__left.blog-block__left_toggle
+          button.btn-aside.btn-aside_show
           ul.aside-menu
             li.aside-menu__item
               a(herf='#' class='aside-menu__link active') Самое важное в SASS

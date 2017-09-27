@@ -3,7 +3,6 @@ extends ../template
 block variables
     - var title = 'Добро пожаловать'
     - var navList = [{url:'my-works.html',name:'Мои работы'},{ url:'about.html',name:'Обо мне'},{ url:'my-blog.html',name:'Блог'}]
-    - var navList2 = [{url:'index.html',name:'Главная'},{ url:'#',name:'Войти'}]
     - var menu = 'navigate'
 block content
 
@@ -31,7 +30,7 @@ block content
                 .back
                     .main-center__content.main-center__content_b
                         form.form-contact(action="#")
-                            h2.block-subtitle.block-subtitle_white Авторизуйтесь
+                            h2.block-subtitle.block-subtitle_white.form-contact_auth-title Авторизуйтесь
                             .input-group.input-group__block
                                 .input-group__icon
                                     span.input-group__login
@@ -58,7 +57,11 @@ block content
                                 label.form-contact__radio-label(for="no") Не уверен
                     .main-center__footer
                         nav.navigate
-                            +navMenu(menu, navList2)
+                            ul.navigate__block
+                                li.navigate__item
+                                    button.navigate__link.navigate__link_style(type="button" id="mainIndex") Главная
+                                li.navigate__item    
+                                    button.navigate__link.navigate__link_style(type="button" id="sub") Войти
     footer.footer
         .footer__bottom.footer__bottom_opacity 
             .footer__bottom-copyright © Евгений Кочешков | Создано с любовью в LoftSchool | 2017
