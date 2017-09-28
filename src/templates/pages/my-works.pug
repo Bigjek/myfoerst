@@ -45,16 +45,22 @@ block content
                   use(xlink:href="assets/img/sprite.svg#link")
                 span.site-school__text Посмотреть сайт
         .work__right
-          .slider
-            .slider__content
-              img.slider_img(src="assets/img/logo.jpg", alt="")
-            .slider__btn
-              button.slider__btn-left
-                svg(class="icon" width="28" height="28")
-                  use(xlink:href="assets/img/sprite.svg#portf_arrow_down") 
-              button.slider__btn-right
-                svg(class="icon" width="28" height="28")
-                  use(xlink:href="assets/img/sprite.svg#portf_arrow_up") 
+          .slider-list
+            ul.slider-list__content
+              li.slider-list__item
+                img.slider-list__img(src="assets/img/other/slide.jpg", alt="")
+              li.slider-list__item
+                img.slider-list__img(src="assets/img/other/slide.jpg", alt="")
+              li.slider-list__item
+                img.slider-list__img(src="assets/img/other/slide.jpg", alt="")
+        .work__btn
+          .slider-btn
+            button.slider-btn__btn-left
+              svg(class="icon" width="45" height="45")
+                use(xlink:href="assets/img/sprite.svg#portf_arrow_down") 
+            button.slider-btn__btn-right
+              svg(class="icon" width="45" height="45")
+                use(xlink:href="assets/img/sprite.svg#portf_arrow_up") 
     section.section.speak
       h2.visually-hidden Личный сайт веб разработчика
       .speak-center

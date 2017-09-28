@@ -103,7 +103,7 @@
             }
             @include iphone{
                 margin-bottom: 14px;
-                font-size: 22px;
+                font-size: 21px;
                 padding: 0 25px 20px;
             }
             &:before{
@@ -693,32 +693,92 @@
     }
 }
 .slider{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    &__content{
+    &-btn{
         display: flex;
-        height: 70%;
-        justify-content: center;
-        align-items: center;
-    }
-    &__btn{
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        &-left,
-        &-right{
-            flex: 1;
-            height: 225px;
-            border: 0;
-            background: rgba(176, 183, 170, 0.7);
-            position: relative;
-            cursor: pointer;
-            &:hover{
-                .icon{
-                    fill:$green-color;
+        height: 100%;
+        &__content{
+            display: flex;
+            height: 70%;
+            justify-content: center;
+            align-items: center;
+        }
+        &__btn{
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            &-left{
+                background: url('../img/other/left_bg_btn.png') center no-repeat ;
+                &:before{
+                    background: rgba(178, 185, 162, 0.68);
                 }
             }
+            &-right{
+                background: url('../img/other/right_bg_btn.png') center no-repeat;
+                &:before{
+                    background: rgba(176, 183, 170, 0.7);
+                }          
+            }
+            &-left,
+            &-right{
+                flex: 1;
+                border: 0;
+                position: relative;
+                cursor: pointer;
+                background-size: contain;
+                background-color: #f8f8f8;
+                &:hover{
+                    .icon{
+                        fill:$green-color;
+                    }
+                }
+                svg{
+                    z-index: 0;
+                    position: relative;
+                }
+                &:before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                }
+                @include ipad{
+                    height: 216px;
+                }
+                @include iphone{
+                    height: 94px;
+                }
+            }
+        }
+    }
+    &-list{
+        height: 100vh;
+        max-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include ipad{
+            min-height: 525px;
+            padding: 45px 0;
+            height: 100%; 
+        }
+        @include iphone{
+            min-height: 258px;
+            padding: 50px 0;
+        }
+       
+        &__content{
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+        }
+        &__item{
+
+        }
+        &__img{
+
         }
     }
 }
