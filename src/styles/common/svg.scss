@@ -12,15 +12,6 @@
         height: 22px;
         fill: white;
         cursor: pointer;
-        @include desktop{
-            
-        }
-        @include laptop{
-        
-        }
-        @include ipad{
-        
-        }
         @include iphone{
             width: 23px;
             height: 23px;

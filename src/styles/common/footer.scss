@@ -13,9 +13,6 @@
         @include laptop{
             padding: 25px 0 20px;
         }
-        @include ipad{
-        
-        }
         @include iphone{
             padding: 10px 0 0px;
             text-align: center;
@@ -69,12 +66,6 @@
             font-weight: 700;
         }
         &_block{
-            @include desktop{
-                
-            }
-            @include laptop{
-            
-            }
             @include ipad{
                 margin-top: 38px;
             }
@@ -88,7 +79,6 @@
     &-menu{
         padding: 0;
         display: flex;
-        justify-content: space-between; 
         margin-bottom: 15px; 
         @include desktop{
             margin-bottom: 25px;
@@ -107,10 +97,7 @@
         }
         &__item{
             display: inline-block;
-            padding: 0 5px;
-            @include desktop{
-                padding: 0 39px 0 0;
-            }
+            padding: 0 29px 0 10px;
             @include laptop{
                 padding: 0 5px;
             }
@@ -127,12 +114,6 @@
             text-decoration: none;
             color: currentColor;
             white-space: nowrap;
-            @include desktop{
-                
-            }
-            @include laptop{
-            
-            }
             @include ipad{
                 font-size: 14px;
             }
@@ -150,7 +131,7 @@
         }
     }
     &__bottom{
-        background: $green-alf;
+        background: $green-circle;
         text-align: center;
         padding: 12px 0px;
         @include iphone{
@@ -158,7 +139,6 @@
         }
         &_opacity{
             background: none;
-            // padding-bottom: 40px;
         }
         &-copyright{
             color:currentColor;

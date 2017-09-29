@@ -39,6 +39,7 @@ p{
     display: flex;
     flex-direction: column;
     height: 100%;
+    overflow: auto;
 }
 .container {
     flex: 1 0 auto;
@@ -55,9 +56,6 @@ p{
 	margin: -1px;
 	padding: 0;
 	border: 0;
-}
-.container{
-    overflow: hidden;
 }
 // color
 $green-color:  #4e8839;

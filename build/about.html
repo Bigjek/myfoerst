@@ -254,7 +254,7 @@
               <li class="footer-menu__item"><a class="footer-menu__link" href="my-works.html">Мои работы</a></li>
               <li class="footer-menu__item"><a class="footer-menu__link" href="about.html">Обо мне</a></li>
               <li class="footer-menu__item"><a class="footer-menu__link" href="my-blog.html">Блог</a></li>
-              <li class="footer-menu__item"><a class="footer-menu__link" href="user.html">Авторизация</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="index.html">Авторизация</a></li>
             </ul>
             <ul class="web footer-web">
               <li class="web__items web__items_l"><a class="web__link web__link_l" href="https://vk.com" target="_blank">
@@ -295,7 +295,7 @@
               <li class="modal-menu__item"><a class="modal-menu__link" href="my-works.html">Мои работы</a></li>
               <li class="modal-menu__item"><a class="modal-menu__link" href="about.html">Обо мне</a></li>
               <li class="modal-menu__item"><a class="modal-menu__link" href="my-blog.html">Блог</a></li>
-              <li class="modal-menu__item"><a class="modal-menu__link" href="user.html">Авторизация</a></li>
+              <li class="modal-menu__item"><a class="modal-menu__link" href="index.html">Авторизация</a></li>
             </ul>
           </div>
         </div>
@@ -304,11 +304,16 @@
   </body>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABMVDqkLdKh_gYee89lEb9QJRe7WGq5fA"></script>
   <script>
-    var map, marker, piter = new google.maps.LatLng(59.731269, 30.611774), newPiter = new google.maps.LatLng(59.733335, 30.604035), image;
+    var map, marker, piter = new google.maps.LatLng(59.731269, 30.611774), size, newPiter = new google.maps.LatLng(59.733335, 30.604035), image;
+    if( window.innerWidth <= 768 ){
+        size = piter
+    } else {
+        size = newPiter
+    } 
     function initialize() {
         map = new google.maps.Map(document.getElementById('map'),{
         zoom: 16,
-        center: newPiter,
+        center: size,
         zoomControl: false,
         mapTypeControl: false,
         scaleControl: false,

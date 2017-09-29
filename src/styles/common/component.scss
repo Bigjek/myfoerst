@@ -7,6 +7,7 @@
         border-radius: 25px; 
         color: white;
         text-decoration: none;
+        cursor: pointer;
         &_opacity{
             background: none;
             border: 1px solid white;
@@ -43,10 +44,6 @@
         border-radius:50%;
         background: $green;
         border: 0;
-        @include desktop{
-        }
-        @include laptop{
-        }
         @include ipad{
             display: block;
         }
@@ -128,9 +125,6 @@
                 letter-spacing: 2px;
                 padding-bottom: 30px;
             }
-            @include laptop{
-            
-            }
             @include ipad{
                 margin-top: -9px;
                 font-size: 50px;
@@ -148,10 +142,6 @@
         }
         &_s{
             font-size: 63px;
-            @include desktop{
-            }
-            @include laptop{
-            }
             @include ipad{
                 font-size: 50px;
                 max-width: 425px;
@@ -164,10 +154,6 @@
             }
         }
         &_f{
-            @include desktop{
-            }
-            @include laptop{
-            }
             @include ipad{
                 letter-spacing: 1px;
                 margin-bottom: 23px;
@@ -187,21 +173,12 @@
             margin-bottom: 12px;
             @include roboto(b);
         }
-        > div:last-child{
-            // margin-bottom: 0;
-        }
     }
     &-contact{
         &__name, &__email, &__text{
             padding: 12px 20px;
             line-height: normal;
             width: 87%;
-            @include desktop{
-            }
-            @include laptop{
-            }
-            @include ipad{
-            }
             @include iphone{
                 font-size: 14px;
                 width: 83%;
@@ -214,11 +191,6 @@
         }
         &__top{
             padding: 40px 20px 0;
-
-            @include desktop{
-            }
-            @include laptop{
-            }
             @include ipad{
                 padding: 35px 20px 0;
             }
@@ -243,10 +215,6 @@
                 z-index: -1;
                 filter: blur(10px);
                 margin: -30px;
-            }
-            @include desktop{
-            }
-            @include laptop{
             }
             @include ipad{
                 max-width: 350px;
@@ -375,12 +343,6 @@
             }
         }
         &_auth-title{
-            @include desktop{
-            }
-            @include laptop{
-            }
-            @include ipad{
-            }
             @include iphone{
                 font-size: 30px;
             }
@@ -455,21 +417,12 @@
     &-list{
         list-style: none;
         padding: 0;
-        &__item{
-
-        }
     }
     &-row{
         &__title{
             @include roboto(m);
             font-size: 28px;
             color: $gray-h2;
-            @include desktop{
-                
-            }
-            @include laptop{
-            
-            }
             @include ipad{
                 font-size: 21px;
             }
@@ -480,9 +433,6 @@
         &__list{
             list-style: none;
             padding: 10px 0 35px;   
-            @include desktop{
-            
-            }
             @include laptop{
                 padding: 15px 0 28px;    
             }
@@ -499,9 +449,6 @@
             width: 120px;
             height: 120px;
             margin-right: 35px;
-            @include desktop{
-                
-            }
             @include laptop{
                 width: 110px;
                 height: 110px;
@@ -657,10 +604,6 @@
             border-right: 3px solid $biege-l;  
             line-height: 1.6;      
             color: $gray-h2;  
-            @include desktop{
-            }
-            @include laptop{
-            }
             @include ipad{
                 color: white;
                 border: 0;
@@ -669,9 +612,6 @@
                 &.active{
                     font-weight: bold;
                 }
-            }
-            @include iphone{
-                
             }
             &:hover, &:active, &:focus, &.active{
                 cursor: pointer;
@@ -774,12 +714,6 @@
             display: flex;
             flex-direction: row;
         }
-        &__item{
-
-        }
-        &__img{
-
-        }
     }
 }
 .modal{
@@ -878,7 +812,7 @@
 .google-map{
     position: absolute;
     top: 0;
-    bottom: 0;
+    bottom: -177px;
     left: 0;
     right: 0;
     z-index: -1;

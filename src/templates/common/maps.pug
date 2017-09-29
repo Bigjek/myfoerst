@@ -1,10 +1,15 @@
 script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABMVDqkLdKh_gYee89lEb9QJRe7WGq5fA")
 script.
-    var map, marker, piter = new google.maps.LatLng(59.731269, 30.611774), newPiter = new google.maps.LatLng(59.733335, 30.604035), image;
+    var map, marker, piter = new google.maps.LatLng(59.731269, 30.611774), size, newPiter = new google.maps.LatLng(59.733335, 30.604035), image;
+    if( window.innerWidth <= 768 ){
+        size = piter
+    } else {
+        size = newPiter
+    } 
     function initialize() {
         map = new google.maps.Map(document.getElementById('map'),{
         zoom: 16,
-        center: newPiter,
+        center: size,
         zoomControl: false,
         mapTypeControl: false,
         scaleControl: false,
