@@ -83,9 +83,6 @@
         }
         &_modal{
             margin: 18px 28px 0 0;
-            @include desktop{
-                margin: 15px 15px 0 0;
-            }
             @include laptop{
                 margin-top: 30px;
             }

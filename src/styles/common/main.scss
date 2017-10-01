@@ -182,12 +182,12 @@ html{
         text-decoration: none;
         @include roboto(m);
         display: block;
-        padding: 14px;
+        padding: 14px 0;
         background: $green; 
         width: 100%;
-        @include iphone{
-            padding: 14px 0;
-        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
         &_style{
             border: 0;
             cursor: pointer;
@@ -471,9 +471,11 @@ html{
         }
    }
    &-description{
-        padding-bottom: 70px;
-        margin-bottom: 65px;
+        padding: 70px 0;
         border-bottom: 5px solid #ecebe4;
+        &:first-child{
+            padding-top: 0;
+        }
        &__title{
             margin: 0;
             padding-bottom: 20px;
