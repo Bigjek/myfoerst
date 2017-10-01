@@ -6,8 +6,7 @@ body{
     height: 100%;
 }
 body{
-    background: url('../img/water.jpg') no-repeat center center fixed; 
-    background-size: cover;
+    background: url('../img/water.jpg') 0/cover fixed; 
 }
 h1{
     @include sansus(w);
@@ -17,11 +16,14 @@ h2{
     @include sansus(w);
     font-size: 35px;
 }
-input, button, textarea{
+input, textarea{
     outline: none;
     border: 1px solid #fff;
 }
-input, button, textarea{
+button{
+    outline: none;
+}
+input, textarea{
     &:focus{
         border: 1px solid #7ba5ff;
     }
@@ -31,12 +33,13 @@ ul, blockquote{
 }
 p{
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 .wrapper {
     display: flex;
     flex-direction: column;
     height: 100%;
+    overflow: auto;
 }
 .container {
     flex: 1 0 auto;

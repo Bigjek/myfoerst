@@ -2,13 +2,13 @@ extends ../template
 
 block variables
   - var title = 'Мои работы'
-  - var nav = [{url:'my-works.html',name:'Мои работы'},{ url:'about.html',name:'Обо мне'},{ url:'my-blog.html',name:'Блог'},{url:'user.html' ,name:'Авторизация'}]
+  - var nav = [{url:'my-works.html',name:'Мои работы'},{ url:'about.html',name:'Обо мне'},{ url:'my-blog.html',name:'Блог'},{url:'index.html' ,name:'Авторизация'}]
   - var box = 'triangle-box-lite'
 block content
   .container
     section.section.header
       h2.visually-hidden Личный сайт веб разработчика
-      .header__top
+      .header__top.header__top_p
         include ../common/header.pug
       .header__block
         .section-title
@@ -25,7 +25,6 @@ block content
             svg(class="icon" width="28" height="28")
               use(xlink:href="assets/img/sprite.svg#arrow_down") 
     section.section.work
-      h2.visually-hidden Мои работы
       +tringleBox(box)
       .work__center
         .section-title.section-title_m
@@ -45,18 +44,23 @@ block content
                   use(xlink:href="assets/img/sprite.svg#link")
                 span.site-school__text Посмотреть сайт
         .work__right
-          .slider
-            .slider__content
-              img.slider_img(src="assets/img/logo.jpg", alt="")
-            .slider__btn
-              button.slider__btn-left
-                svg(class="icon" width="28" height="28")
-                  use(xlink:href="assets/img/sprite.svg#portf_arrow_down") 
-              button.slider__btn-right
-                svg(class="icon" width="28" height="28")
-                  use(xlink:href="assets/img/sprite.svg#portf_arrow_up") 
+          .slider-list
+            ul.slider-list__content
+              li.slider-list__item
+                img.slider-list__img(src="assets/img/other/slide.jpg", alt="")
+              li.slider-list__item
+                img.slider-list__img(src="assets/img/other/slide.jpg", alt="")
+              li.slider-list__item
+                img.slider-list__img(src="assets/img/other/slide.jpg", alt="")
+        .work__btn
+          .slider-btn
+            button.slider-btn__left
+              svg(class="icon" width="45" height="45")
+                use(xlink:href="assets/img/sprite.svg#portf_arrow_down") 
+            button.slider-btn__right
+              svg(class="icon" width="45" height="45")
+                use(xlink:href="assets/img/sprite.svg#portf_arrow_up") 
     section.section.speak
-      h2.visually-hidden Личный сайт веб разработчика
       .speak-center
         .section-title.section-title_m
           svg(class="icon-green" width="100%" height="150")
@@ -90,7 +94,7 @@ block content
         .speak-center__form
           form.form-contact.form-contact_w(action="")
             .form-contact__top
-              h2.block-subtitle.block-subtitle_gray Связяться со мной
+              h2.block-subtitle.block-subtitle_gray.block-subtitle_f Связяться со мной
               .input-group.input-group__block
                 label.visually-hidden(for="name")
                 input.form-contact__name.form-contact__name_b(type="text", name="name", placeholder="Имя", id="name")
