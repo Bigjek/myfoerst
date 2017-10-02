@@ -15,17 +15,17 @@ block content
                 .front
                     .main-center__content.main-center__content_f
                         .user.main__user
-                        .user__block-images
-                            img(src="./assets/img/logo.jpg", alt="logo").user__image
-                        .user__description
-                            .user__name Евгений Кочешков
-                            .user__info Личный сайт веб разработчика
-                        ul.web.main-web
-                        each i in social
-                            +svg(i.url, i.class_name, i.name)
+                            .user__block-images
+                                img(src="./assets/img/logo.jpg", alt="logo").user__image
+                            .user__description
+                                .user__name Евгений Кочешков
+                                .user__info Личный сайт веб разработчика
+                            ul.web.main-web
+                                each i in social
+                                    +svg(i.url, i.class_name, i.name)
                     .main-center__footer
                         nav.navigate
-                        +navMenu(menu, navList)
+                            +navMenu(menu, navList)
 
                 .back
                     .main-center__content.main-center__content_b

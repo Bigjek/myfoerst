@@ -44,6 +44,7 @@
         border-radius:50%;
         background: $green;
         border: 0;
+        z-index: 3;
         @include ipad{
             display: block;
         }
@@ -448,15 +449,12 @@
             display: inline-block;
             width: 120px;
             height: 120px;
-            margin-right: 35px;
+            margin: 0 35px 35px 0;
             @include laptop{
                 width: 110px;
                 height: 110px;
             }
             @include ipad{
-                margin: 0 18px;
-            }
-            @include iphone{
                 margin: 0 18px 30px;
             }
         }
@@ -609,6 +607,7 @@
                 border: 0;
                 font-size: 16px;
                 font-weight: normal;
+                padding-left: 35px;
                 &.active{
                     font-weight: bold;
                 }
@@ -630,6 +629,10 @@
                 }         
             }
         }
+        &_fix{
+            position: sticky;
+            top: 0;
+        }
     }
 }
 .slider{
@@ -642,53 +645,48 @@
             justify-content: center;
             align-items: center;
         }
-        &__btn{
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            &-left{
-                background: url('../img/other/left_bg_btn.png') center no-repeat ;
-                &:before{
-                    background: rgba(178, 185, 162, 0.68);
+        &__left{
+            background: url('../img/other/left_bg_btn.png') center no-repeat ;
+            &:before{
+                background: rgba(178, 185, 162, 0.68);
+            }
+        }
+        &__right{
+            background: url('../img/other/right_bg_btn.png') center no-repeat;
+            &:before{
+                background: rgba(176, 183, 170, 0.7);
+            }          
+        }
+        &__left,
+        &__right{
+            flex: 1;
+            border: 0;
+            position: relative;
+            cursor: pointer;
+            background-size: contain;
+            background-color: #f8f8f8;
+            &:hover{
+                .icon{
+                    fill:$green-color;
                 }
             }
-            &-right{
-                background: url('../img/other/right_bg_btn.png') center no-repeat;
-                &:before{
-                    background: rgba(176, 183, 170, 0.7);
-                }          
-            }
-            &-left,
-            &-right{
-                flex: 1;
-                border: 0;
+            svg{
+                z-index: 0;
                 position: relative;
-                cursor: pointer;
-                background-size: contain;
-                background-color: #f8f8f8;
-                &:hover{
-                    .icon{
-                        fill:$green-color;
-                    }
-                }
-                svg{
-                    z-index: 0;
-                    position: relative;
-                }
-                &:before{
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                }
-                @include ipad{
-                    height: 216px;
-                }
-                @include iphone{
-                    height: 94px;
-                }
+            }
+            &:before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+            @include ipad{
+                height: 216px;
+            }
+            @include iphone{
+                height: 94px;
             }
         }
     }
