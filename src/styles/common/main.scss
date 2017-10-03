@@ -482,6 +482,9 @@ html{
         &:first-child{
             padding-top: 0;
         }
+        &:last-child{
+            margin-bottom: 25%;
+        }
        &__title{
             margin: 0;
             padding-bottom: 20px;

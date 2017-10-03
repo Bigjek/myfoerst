@@ -602,6 +602,7 @@
             border-right: 3px solid $biege-l;  
             line-height: 1.6;      
             color: $gray-h2;  
+            text-decoration: none;
             @include ipad{
                 color: white;
                 border: 0;
@@ -612,7 +613,8 @@
                     font-weight: bold;
                 }
             }
-            &:hover, &:active, &:focus, &.active{
+            &:active, &:focus{}
+            &:hover, &.active{
                 cursor: pointer;
                 color: $green-color;   
                 border-right: 3px solid $green-color;  
