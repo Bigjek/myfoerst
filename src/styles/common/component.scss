@@ -667,6 +667,7 @@
             cursor: pointer;
             background-size: contain;
             background-color: #f8f8f8;
+            width: 50%;
             &:hover{
                 .icon{
                     fill:$green-color;
@@ -674,7 +675,9 @@
             }
             svg{
                 z-index: 0;
-                position: relative;
+                position: absolute;
+                top: 50%;
+                margin-top: -20px;
             }
             &:before{
                 content: '';
@@ -713,6 +716,39 @@
             list-style: none;
             display: flex;
             flex-direction: row;
+            justify-content: center;
+        }
+        &__item{
+            img{
+                display: none;
+                width: 100%;
+            }
+            &.active{
+                img{
+                    display: block;
+                }
+            }
+        }
+    }
+    &-mini-list{
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        &__item{
+            width: auto;
+            height: 180px;
+            display: none;
+            &.active{
+                display: block;
+            }
+        }
+        &__img{
+            height: 100%;
         }
     }
 }

@@ -8,7 +8,7 @@ const blogScrollMenuInit = require ('./common/blog-scroll-menu');
 
 // Slider
 if($('.slider').length){
-  slider(); 
+  slider.init($('.slider')); 
 }
 
 // Menu

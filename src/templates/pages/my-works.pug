@@ -32,7 +32,7 @@ block content
             use(xlink:href="assets/img/sprite.svg#works_header")
         .work__title
           h1.block-title.block-title_gray-h #{title}
-      .work__block
+      .work__block.slider
         .work__left
           .site-school
             .site-school__title
@@ -45,19 +45,39 @@ block content
                 span.site-school__text Посмотреть сайт
         .work__right
           .slider-list
-            ul.slider-list__content
+            ul.slider.slider-list__content
+              li.slider-list__item
+                img.slider-list__img(src="assets/img/other/slide.jpg", alt="")
+              li.slider-list__item.active
+                img.slider-list__img(src="assets/img/other/slide1.jpg", alt="")
               li.slider-list__item
                 img.slider-list__img(src="assets/img/other/slide.jpg", alt="")
               li.slider-list__item
-                img.slider-list__img(src="assets/img/other/slide.jpg", alt="")
-              li.slider-list__item
-                img.slider-list__img(src="assets/img/other/slide.jpg", alt="")
+                img.slider-list__img(src="assets/img/other/slide1.jpg", alt="")
         .work__btn
           .slider-btn
-            button.slider-btn__left
+            button.slider.slider-btn__left#prev
+              ul.slider-mini-list
+                li.slider-mini-list__item.active
+                  img.slider-mini-list__img(src="assets/img/other/slide.jpg", alt="")
+                li.slider-mini-list__item
+                  img.slider-mini-list__img(src="assets/img/other/slide1.jpg", alt="")
+                li.slider-mini-list__item
+                  img.slider-mini-list__img(src="assets/img/other/slide.jpg", alt="")
+                li.slider-mini-list__item
+                    img.slider-mini-list__img(src="assets/img/other/slide1.jpg", alt="")
               svg(class="icon" width="45" height="45")
                 use(xlink:href="assets/img/sprite.svg#portf_arrow_down") 
-            button.slider-btn__right
+            button.slider.slider-btn__right#next
+              ul.slider-mini-list
+                  li.slider-mini-list__item
+                    img.slider-mini-list__img(src="assets/img/other/slide.jpg", alt="")
+                  li.slider-mini-list__item
+                    img.slider-mini-list__img(src="assets/img/other/slide1.jpg", alt="")
+                  li.slider-mini-list__item.active
+                    img.slider-mini-list__img(src="assets/img/other/slide.jpg", alt="")
+                  li.slider-mini-list__item
+                    img.slider-mini-list__img(src="assets/img/other/slide1.jpg", alt="")
               svg(class="icon" width="45" height="45")
                 use(xlink:href="assets/img/sprite.svg#portf_arrow_up") 
     section.section.speak
