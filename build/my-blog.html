@@ -52,7 +52,7 @@
               </div>
             </div>
             <div class="arrow-down arrow-down__btn_up">
-              <button class="arrow-down__btn">
+              <button class="arrow-down__btn" data-href="#section">
                 <svg class="icon" width="28" height="28">
                   <use xlink:href="assets/img/sprite.svg#arrow_down"> </use>
                 </svg>
@@ -60,7 +60,7 @@
             </div>
           </div>
         </section>
-        <section class="section blog">
+        <section class="section blog" id="section">
           <h2 class="visually-hidden">Список статей которые я написал</h2>
           <div class="triangle-box-lite">
             <svg class="traingle" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
@@ -71,15 +71,15 @@
           <div class="blog-block">
             <aside class="blog-block__left blog-block__left_toggle">
               <button class="btn-aside btn-aside_show"></button>
-              <ul class="aside-menu">
-                <li class="aside-menu__item"><a class="aside-menu__link active" herf="#">Самое важное в SASS</a></li>
-                <li class="aside-menu__item"><a class="aside-menu__link" herf="#">Приёмы в вёрстке, без которых не обходится ни один сайт</a></li>
-                <li class="aside-menu__item"><a class="aside-menu__link" herf="#">Самый необходимый набор Gulp плагинов</a></li>
-                <li class="aside-menu__item"><a class="aside-menu__link" herf="#">Почему я выбрал PUG</a></li>
+              <ul class="aside-menu aside-menu_fix">
+                <li class="aside-menu__item"><a class="aside-menu__link active" href="#article01">Самое важное в SASS</a></li>
+                <li class="aside-menu__item"><a class="aside-menu__link" href="#article02">Приёмы в вёрстке, без которых не обходится ни один сайт</a></li>
+                <li class="aside-menu__item"><a class="aside-menu__link" href="#article03">Самый необходимый набор Gulp плагинов</a></li>
+                <li class="aside-menu__item"><a class="aside-menu__link" href="#article04">Почему я выбрал PUG</a></li>
               </ul>
             </aside>
             <div class="blog-block__right">
-              <article class="blog-description">
+              <article class="blog-description" id="article01">
                 <h2 class="blog-description__title">Самое важное в SASS</h2>
                 <div class="blog-description__date"> 
                   <time class="time" datetime="2017-09-15">15 сентября 2017</time>
@@ -89,8 +89,28 @@
                   <p>Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p><code>Код</code>
                 </div>
               </article>
-              <article class="blog-description">
-                <h2 class="blog-description__title">Самое важное в SASS</h2>
+              <article class="blog-description" id="article02">
+                <h2 class="blog-description__title">Приёмы в вёрстке, без которых не обходится ни один сайт</h2>
+                <div class="blog-description__date">
+                  <time class="time" datetime="2017-09-15">15 сентября 2017</time>
+                </div>
+                <div class="blog-description__text text-content">
+                  <p>Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.</p>
+                  <p>Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p><code>Код</code>
+                </div>
+              </article>
+              <article class="blog-description" id="article03">
+                <h2 class="blog-description__title">Самый необходимый набор Gulp плагинов</h2>
+                <div class="blog-description__date">
+                  <time class="time" datetime="2017-09-15">15 сентября 2017</time>
+                </div>
+                <div class="blog-description__text text-content">
+                  <p>Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.</p>
+                  <p>Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p><code>Код</code>
+                </div>
+              </article>
+              <article class="blog-description" id="article04">
+                <h2 class="blog-description__title">Почему я выбрал PUG</h2>
                 <div class="blog-description__date">
                   <time class="time" datetime="2017-09-15">15 сентября 2017</time>
                 </div>

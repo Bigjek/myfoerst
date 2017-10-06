@@ -21,10 +21,10 @@ block content
             .user__name.user__name_size Евгений Кочешков
             .user__info Личный сайт веб разработчика
         .arrow-down.arrow-down__btn_up
-          button.arrow-down__btn
+          button.arrow-down__btn(data-href="#section")
             svg(class="icon" width="28" height="28")
               use(xlink:href="assets/img/sprite.svg#arrow_down") 
-    section.section.work
+    section.section.work#section
       +tringleBox(box)
       .work__center
         .section-title.section-title_m
@@ -32,7 +32,7 @@ block content
             use(xlink:href="assets/img/sprite.svg#works_header")
         .work__title
           h1.block-title.block-title_gray-h #{title}
-      .work__block
+      .work__block.slider
         .work__left
           .site-school
             .site-school__title
@@ -46,18 +46,22 @@ block content
         .work__right
           .slider-list
             ul.slider-list__content
+              li.slider-list__item.active
+                img.slider-list__img(src="assets/img/other/slide1.jpg", alt="1")
               li.slider-list__item
-                img.slider-list__img(src="assets/img/other/slide.jpg", alt="")
+                img.slider-list__img(src="assets/img/other/slide2.jpg", alt="2")
               li.slider-list__item
-                img.slider-list__img(src="assets/img/other/slide.jpg", alt="")
+                img.slider-list__img(src="assets/img/other/slide3.jpg", alt="3")
               li.slider-list__item
-                img.slider-list__img(src="assets/img/other/slide.jpg", alt="")
+                img.slider-list__img(src="assets/img/other/slide4.jpg", alt="4")
         .work__btn
           .slider-btn
-            button.slider-btn__left
+            button.slider-btn__control.slider-btn__control_left
+              .bg-left.slider-list-mini
               svg(class="icon" width="45" height="45")
                 use(xlink:href="assets/img/sprite.svg#portf_arrow_down") 
-            button.slider-btn__right
+            button.slider-btn__control.slider-btn__control_right
+              .bg-right.slider-list-mini
               svg(class="icon" width="45" height="45")
                 use(xlink:href="assets/img/sprite.svg#portf_arrow_up") 
     section.section.speak
@@ -92,7 +96,7 @@ block content
                   cite.comment-list__author Ковальчук Дмитрий
                     .comment-list__status — основатель Loftschool 
         .speak-center__form
-          form.form-contact.form-contact_w(action="")
+          form.form-contact.form-contact_w#contact(action="")
             .form-contact__top
               h2.block-subtitle.block-subtitle_gray.block-subtitle_f Связяться со мной
               .input-group.input-group__block

@@ -23,10 +23,10 @@ block content
             .user__name.user__name_size Евгений Кочешков
             .user__info Личный сайт веб разработчика
         .arrow-down.arrow-down__btn_up
-          button.arrow-down__btn
+          button.arrow-down__btn(data-href="#section")
             svg(class="icon" width="28" height="28")
               use(xlink:href="assets/img/sprite.svg#arrow_down") 
-    section.section.about
+    section.section.about#section
       h2.visually-hidden Кто я
       +tringleBox(box)
       .about__block

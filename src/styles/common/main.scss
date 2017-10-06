@@ -90,6 +90,7 @@ html{
        
         &__image{
             text-align: center;
+            padding: 0 20px;
         }
         &__avatar{
             max-width: 470px;
@@ -444,6 +445,9 @@ html{
         &__left{
             width: 33.3%;
             padding: 55px 90px 20px 10px;
+            @include laptop{
+                padding-right: 3%;
+            }
             &_toggle{
                 @include ipad{
                     position: fixed;
@@ -455,6 +459,7 @@ html{
                     background: $green;
                     &.active{
                         left: -70px;
+                        z-index: 2;
                     }
                     .aside-menu{
                         overflow-y: auto;
@@ -465,6 +470,7 @@ html{
                 @include iphone{
                     &.active{
                         left: -45px;
+                        z-index: 2;
                     }
                 }
             }
@@ -475,6 +481,9 @@ html{
         border-bottom: 5px solid #ecebe4;
         &:first-child{
             padding-top: 0;
+        }
+        &:last-child{
+            margin-bottom: 25%;
         }
        &__title{
             margin: 0;
