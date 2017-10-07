@@ -386,6 +386,7 @@ html{
     border-radius: 5px;
     overflow: hidden;
     padding: 25px 40px;
+    z-index: 1;
     @include ipad{
         min-width: 350px;
         padding: 30px 20px;
