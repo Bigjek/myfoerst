@@ -1,5 +1,3 @@
-const $ = require('jquery');
-// инициализация
 const slider = (function() {
   let
     flag = true,

@@ -1,5 +1,3 @@
-const $ = require('jquery');
-
 function toggleInit(){
   $('.btn-aside').on('click', function(e){
     e.preventDefault();

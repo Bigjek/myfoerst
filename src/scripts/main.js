@@ -1,4 +1,3 @@
-const $ = require('jquery');
 const slider = require ('./common/slider');
 const modalNav = require ('./common/modal');
 const flipInit = require ('./common/flip');
@@ -13,8 +12,8 @@ if($('.slider').length){
 }
 
 // Validation
-if($('#auth').length){
-  validationAuthInit.init($('#auth')); 
+if($('#authfo').length){
+  validationAuthInit.init($('#authfo')); 
 }
 
 // Validation

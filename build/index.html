@@ -55,8 +55,8 @@
               </div>
             </div>
             <div class="back">
-              <div class="main-center__content main-center__content_b">
-                <form class="form-contact" id="auth" action="#">
+              <div class="main-center__content">
+                <form class="form-contact" id="authfo" action="">
                   <h2 class="block-subtitle block-subtitle_white form-contact_auth-title">Авторизуйтесь</h2>
                   <div class="input-group input-group__block">
                     <div class="input-group__icon"><span class="input-group__login">
@@ -89,19 +89,17 @@
                     <input class="form-contact__radio" type="radio" name="robot" value="0" id="no">
                     <label class="form-contact__radio-label" for="no">Не уверен</label>
                   </div>
+                  <nav class="navigate navigate_m">
+                    <ul class="navigate__block">
+                      <li class="navigate__item">
+                        <button class="navigate__link navigate__link_style" type="button" id="mainIndex">Главная</button>
+                      </li>
+                      <li class="navigate__item">   
+                        <button class="navigate__link navigate__link_style" type="submit" id="sub">Войти    </button>
+                      </li>
+                    </ul>
+                  </nav>
                 </form>
-              </div>
-              <div class="main-center__footer">
-                <nav class="navigate">
-                  <ul class="navigate__block">
-                    <li class="navigate__item">
-                      <button class="navigate__link navigate__link_style" type="button" id="mainIndex">Главная</button>
-                    </li>
-                    <li class="navigate__item">   
-                      <button class="navigate__link navigate__link_style" type="button" id="sub">Войти</button>
-                    </li>
-                  </ul>
-                </nav>
               </div>
             </div>
           </div>
@@ -114,5 +112,7 @@
       </footer>
     </div>
   </body>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery.min.js"><\/script>');</script>
   <script src="./assets/scripts/main.js" defer></script>
 </html>

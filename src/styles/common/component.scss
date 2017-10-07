@@ -1,4 +1,9 @@
 .btn{
+    &-modal{
+        color: #fff;
+        padding: 12px 20px;
+        border-radius: 7px;
+    }
     &-link{
         @include roboto(m);
         display: inline-block;
@@ -24,6 +29,7 @@
                 background: none;
                 border: 1px solid $green-color;
                 color: $green-color;
+                cursor: pointer;
                 .icon-white{
                     fill: $green-color;
                 }
@@ -833,6 +839,27 @@
             }
         }
     }
+    &-success{
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        background: #fff;
+        padding: 20px;
+        border-radius: 7px;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        max-width: 280px;
+        width: 100%;
+        box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.49);
+        z-index: 5;
+        &__text{
+            @include roboto(r);
+            color: $gray-h1;
+            margin-bottom: 20px;
+        }
+
+    }
 }
 .in{
     display: block;
@@ -918,5 +945,27 @@ form{
         svg{
             fill: $red!important;
         }
+        input[type="checkbox"]{
+           & + .error-box{
+               margin-top: 40px;
+           }
+        }
+    }
+}
+.loader {
+    border: 16px solid #f3f3f3; 
+    border-top: 16px solid $green-color;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.navigate{
+    &_m{
+        margin: 0 -20px;
     }
 }

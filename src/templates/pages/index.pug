@@ -28,8 +28,8 @@ block content
                             +navMenu(menu, navList)
 
                 .back
-                    .main-center__content.main-center__content_b
-                        form.form-contact#auth(action="#")
+                    .main-center__content
+                        form.form-contact#authfo(action="")
                             h2.block-subtitle.block-subtitle_white.form-contact_auth-title Авторизуйтесь
                             .input-group.input-group__block
                                 .input-group__icon
@@ -55,13 +55,14 @@ block content
                                 label.form-contact__radio-label(for="yes") Да
                                 input.form-contact__radio(type="radio" name="robot" value="0" id="no") 
                                 label.form-contact__radio-label(for="no") Не уверен
-                    .main-center__footer
-                        nav.navigate
-                            ul.navigate__block
-                                li.navigate__item
-                                    button.navigate__link.navigate__link_style(type="button" id="mainIndex") Главная
-                                li.navigate__item    
-                                    button.navigate__link.navigate__link_style(type="button" id="sub") Войти
+                            nav.navigate.navigate_m
+                                ul.navigate__block
+                                    li.navigate__item
+                                        button.navigate__link.navigate__link_style(type="button" id="mainIndex") Главная
+                                    li.navigate__item    
+                                        button.navigate__link.navigate__link_style(type="submit" id="sub") Войти    
+                
+                    
     footer.footer
         .footer__bottom.footer__bottom_opacity 
             .footer__bottom-copyright © Евгений Кочешков | Создано с любовью в LoftSchool | 2017

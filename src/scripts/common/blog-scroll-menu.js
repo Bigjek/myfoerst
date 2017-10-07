@@ -1,5 +1,3 @@
-const $ = require('jquery');
-
 function blogScrollMenuInit(){
 
   var lastId,

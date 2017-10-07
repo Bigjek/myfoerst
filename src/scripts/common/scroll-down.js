@@ -1,5 +1,3 @@
-const $ = require('jquery');
-
 function scrollDownInit(){
   $(document).on('click', '.arrow-down__btn',function(e){
     e.preventDefault();

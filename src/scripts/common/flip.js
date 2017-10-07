@@ -1,5 +1,3 @@
-const $ = require('jquery');
-
 function flipInit(){
   $('#auth').on('click', function(e){
     e.preventDefault();
