@@ -9,8 +9,11 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="./assets/styles/main.min.css"><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="./assets/libs/js/three.min.js"></script>
   </head>
   <body>
+    <div id="bg"></div>
     <div class="wrapper">
       <div class="container">
         <section class="section header">
@@ -79,24 +82,67 @@
           </div>
           <div class="work__block slider">
             <div class="work__left">
-              <div class="site-school">
-                <div class="site-school__title">
-                  <h2 class="block-subtitle block-subtitle_gray">Сайт школы онлайн образования</h2>
-                </div>
-                <div class="site-school__description">HTML, CSS, JAVASCRIPT</div>
-                <div class="site-school__link"><a class="btn-link btn-link_green" href="#">
-                    <svg class="icon-white" width="20" height="20">
-                      <use xlink:href="assets/img/sprite.svg#link"></use>
-                    </svg><span class="site-school__text">Посмотреть сайт</span></a></div>
-              </div>
+              <div class="slider-inform"></div>
             </div>
             <div class="work__right">
               <div class="slider-list">
                 <ul class="slider-list__content">
-                  <li class="slider-list__item active"><img class="slider-list__img" src="assets/img/other/slide1.jpg" alt="1"></li>
-                  <li class="slider-list__item"><img class="slider-list__img" src="assets/img/other/slide2.jpg" alt="2"></li>
-                  <li class="slider-list__item"><img class="slider-list__img" src="assets/img/other/slide3.jpg" alt="3"></li>
-                  <li class="slider-list__item"><img class="slider-list__img" src="assets/img/other/slide4.jpg" alt="4"></li>
+                  <li class="slider-list__item active"><img class="slider-list__img" src="assets/img/other/slide1.jpg" alt="1">
+                    <div class="slider-desc">
+                      <div class="site-school">
+                        <div class="site-school__title">
+                          <h2 class="block-subtitle block-subtitle_gray">Сайт школы онлайн образования1</h2>
+                        </div>
+                        <div class="site-school__description">HTML, CSS, JAVASCRIPT</div>
+                        <div class="site-school__link"><a class="btn-link btn-link_green" href="#">
+                            <svg class="icon-white" width="20" height="20">
+                              <use xlink:href="assets/img/sprite.svg#link"></use>
+                            </svg><span class="site-school__text">Посмотреть сайт</span></a></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="slider-list__item"><img class="slider-list__img" src="assets/img/other/slide2.jpg" alt="2">
+                    <div class="slider-desc">
+                      <div class="site-school">
+                        <div class="site-school__title">
+                          <h2 class="block-subtitle block-subtitle_gray">Сайт школы онлайн образования2</h2>
+                        </div>
+                        <div class="site-school__description">HTML, CSS, JAVASCRIPT</div>
+                        <div class="site-school__link"><a class="btn-link btn-link_green" href="#">
+                            <svg class="icon-white" width="20" height="20">
+                              <use xlink:href="assets/img/sprite.svg#link"></use>
+                            </svg><span class="site-school__text">Посмотреть сайт</span></a></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="slider-list__item"><img class="slider-list__img" src="assets/img/other/slide3.jpg" alt="3">
+                    <div class="slider-desc">
+                      <div class="site-school">
+                        <div class="site-school__title">
+                          <h2 class="block-subtitle block-subtitle_gray">Сайт школы онлайн образования3</h2>
+                        </div>
+                        <div class="site-school__description">HTML, CSS, JAVASCRIPT</div>
+                        <div class="site-school__link"><a class="btn-link btn-link_green" href="#">
+                            <svg class="icon-white" width="20" height="20">
+                              <use xlink:href="assets/img/sprite.svg#link"></use>
+                            </svg><span class="site-school__text">Посмотреть сайт</span></a></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="slider-list__item"><img class="slider-list__img" src="assets/img/other/slide4.jpg" alt="4">
+                    <div class="slider-desc">
+                      <div class="site-school">
+                        <div class="site-school__title">
+                          <h2 class="block-subtitle block-subtitle_gray">Сайт школы онлайн образования4</h2>
+                        </div>
+                        <div class="site-school__description">HTML, CSS, JAVASCRIPT</div>
+                        <div class="site-school__link"><a class="btn-link btn-link_green" href="#">
+                            <svg class="icon-white" width="20" height="20">
+                              <use xlink:href="assets/img/sprite.svg#link"></use>
+                            </svg><span class="site-school__text">Посмотреть сайт</span></a></div>
+                      </div>
+                    </div>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -258,8 +304,14 @@
         </div>
       </div>
     </div>
+    <div class="preloader">
+      <div class="preloader__spinner">
+        <div class="preloader__animation"></div>
+        <div class="preloader__percents">0%</div>
+      </div>
+    </div>
   </body>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/libs/jquery.min.js"><\/script>');</script>
-  <script src="./assets/scripts/main.js" defer></script>
+  <script src="./assets/scripts/main.js"></script>
 </html>

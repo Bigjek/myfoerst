@@ -24,11 +24,12 @@ const slider = (function() {
           lastElem = elems.last();
 
         thisElem.clearPlay();
+        
                
         if ($this.hasClass('slider-btn__control_left')) {
-          nextElem.length ? thisElem.move(nextElem, 'next') : thisElem.move(firstElem, 'next');
+          nextElem.length ? thisElem.move(nextElem, 'next') : thisElem.move(firstElem, 'next'); 
         }else{
-          prevElem.length ? thisElem.move(prevElem, 'next') : thisElem.move(lastElem, 'back');   
+          prevElem.length ? thisElem.move(prevElem, 'next') : thisElem.move(lastElem, 'back');
         }
 
         thisElem.btnPlay();
@@ -37,6 +38,7 @@ const slider = (function() {
 
     },
     move: function(elem, dir){
+      const thisElem = this;
       let 
         block = elem.parents('.slider'),
         elems = block.find('.slider-list__item'),
@@ -82,6 +84,7 @@ const slider = (function() {
           $this.toggleClass('in-active active');
           flag = true;
         });
+        thisElem.moveContent(inActiveMove);
       }
       
     },
@@ -94,6 +97,13 @@ const slider = (function() {
 
       next.children().clone().appendTo(leftBgBtn);
       prev.children().clone().appendTo(rightBgBtn);
+    },
+    moveContent: function(activeElem){
+      let 
+        block = slider.find('.slider-inform').empty(),
+        item = activeElem.find('.slider-desc');
+        
+      item.clone().appendTo(block).animate({opacity: '.5'}, 'slow').animate({opacity: '1'}, 'fast');
     },
     autoPlay: function(){
       let thisElem = this;
@@ -109,6 +119,7 @@ const slider = (function() {
         thisElem.btnPlay();  
 
       }, durationTimer);
+
     },
     clearPlay: function(){
       if (timer) {

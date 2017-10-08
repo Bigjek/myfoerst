@@ -9,8 +9,11 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="./assets/styles/main.min.css"><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="./assets/libs/js/three.min.js"></script>
   </head>
   <body>
+    <div id="bg"></div>
     <div class="wrapper">
       <div class="container">
         <section class="section header">
@@ -299,7 +302,15 @@
         </div>
       </div>
     </div>
+    <div class="preloader">
+      <div class="preloader__spinner">
+        <div class="preloader__animation"></div>
+        <div class="preloader__percents">0%</div>
+      </div>
+    </div>
   </body>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery.min.js"><\/script>');</script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABMVDqkLdKh_gYee89lEb9QJRe7WGq5fA"></script>
   <script>
     var map, marker, piter = new google.maps.LatLng(59.731269, 30.611774), size, newPiter = new google.maps.LatLng(59.733335, 30.604035), image;
@@ -376,7 +387,5 @@
     }
     google.maps.event.addDomListener(window, 'load', initialize);
   </script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery.min.js"><\/script>');</script>
-  <script src="./assets/scripts/main.js" defer></script>
+  <script src="./assets/scripts/main.js"></script>
 </html>

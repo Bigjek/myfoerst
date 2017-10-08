@@ -5,6 +5,17 @@ const toggleInit = require ('./common/toggle');
 const scrollDownInit = require ('./common/scroll-down');
 const blogScrollMenuInit = require ('./common/blog-scroll-menu');
 const validationAuthInit = require ('./common/validation');
+const preloaderOne = require ('./common/preloader');
+// const web = require ('./common/webgl');
+
+// if($('#bg').length){
+//   web.init(); 
+// }
+
+// Preloader
+if($('.preloader').length){
+  preloaderOne.init(); 
+}
 
 // Slider
 if($('.slider').length){
