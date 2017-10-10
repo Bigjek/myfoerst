@@ -619,7 +619,9 @@
                     font-weight: bold;
                 }
             }
-            &:active, &:focus{}
+            &:active, &:focus{
+                color: $gray-h2;
+            }
             &:hover, &.active{
                 cursor: pointer;
                 color: $green-color;   

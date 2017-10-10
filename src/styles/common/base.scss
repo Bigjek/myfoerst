@@ -20,6 +20,9 @@ input, textarea{
     outline: none;
     border: 1px solid #fff;
 }
+textarea{
+    resize: vertical;
+}
 button{
     outline: none;
 }
