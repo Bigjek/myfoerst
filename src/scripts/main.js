@@ -8,6 +8,7 @@ const validationAuthInit = require ('./common/validation');
 const preloaderOne = require ('./common/preloader');
 const web = require ('./common/webgl');
 
+
 if($('#bg').length){
   web.init(); 
 }

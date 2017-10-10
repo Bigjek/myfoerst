@@ -580,11 +580,13 @@ html{
     }
 }
 .form-contact_w:before{
-    background: url('../img/bg_works.jpg') center / cover fixed;
+    background: url('../img/bg_works.jpg') center / cover ;
+    background-size: initial;
+    background-position: -365px -365px;
 }
 .speak{
     padding-top: 55px;
-    background: url('../img/bg_works.jpg') center 0/cover ;
+    background: url('../img/bg_works.jpg') center 0/cover no-repeat;
     @include desktop{
         padding-top: 75px;
     }
