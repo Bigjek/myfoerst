@@ -6,11 +6,12 @@ const scrollDownInit = require ('./common/scroll-down');
 const blogScrollMenuInit = require ('./common/blog-scroll-menu');
 const validationAuthInit = require ('./common/validation');
 const preloaderOne = require ('./common/preloader');
-// const web = require ('./common/webgl');
+const web = require ('./common/webgl');
 
-// if($('#bg').length){
-//   web.init(); 
-// }
+
+if($('#bg').length){
+  web.init(); 
+}
 
 // Preloader
 if($('.preloader').length){
@@ -34,25 +35,25 @@ if($('#contact').length){
 
 // Menu
 if($('.menu__link').length){
-  modalNav();
+  modalNav.init();
 }
 
 // Flip page Index
 if($('#auth').length){
-  flipInit();
+  flipInit.init();
 }
 
 // Toggle aside page My-blog
 if($('.btn-aside').length){
-  toggleInit();
+  toggleInit.init();
 }
 
 // Scroll button
 if($('.arrow-down__btn').length){
-  scrollDownInit();
+  scrollDownInit.init();
 }
 
 //Blog scroll
 if($('.blog-block__right').length){
-  blogScrollMenuInit();
+  blogScrollMenuInit.init();
 }
