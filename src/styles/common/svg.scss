@@ -1,11 +1,18 @@
+#hamburger{
+    fill: red;
+}
 .icon {
     line-height: 2rem;
     display: inline-block;
     vertical-align: middle;
     fill: #FFFFFF;
     cursor: pointer;
+    .lhum{
+        stroke: red;
+    }
     &:hover{
         fill: $green-color;
+
     }
     &-svg{
         width: 32px;
@@ -18,6 +25,7 @@
         }
         &:hover{
             fill: $green-color;
+
         }
     }
     &-lite, &-green, &-green-lite{

@@ -20,6 +20,9 @@ input, textarea{
     outline: none;
     border: 1px solid #fff;
 }
+textarea{
+    resize: vertical;
+}
 button{
     outline: none;
 }
@@ -46,6 +49,7 @@ p{
 }
 .footer {
     flex: 0 0 auto;
+    z-index: 1;
 }
 .visually-hidden {
 	position: absolute;
@@ -69,3 +73,4 @@ $gray-h2: #566358;
 $gray-h1: #373e42;
 $biege: #ebefe2;
 $biege-l: #f4f5f0;
+$red: #e34844;

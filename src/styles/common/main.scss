@@ -90,6 +90,7 @@ html{
        
         &__image{
             text-align: center;
+            padding: 0 20px;
         }
         &__avatar{
             max-width: 470px;
@@ -385,6 +386,7 @@ html{
     border-radius: 5px;
     overflow: hidden;
     padding: 25px 40px;
+    z-index: 1;
     @include ipad{
         min-width: 350px;
         padding: 30px 20px;
@@ -444,6 +446,9 @@ html{
         &__left{
             width: 33.3%;
             padding: 55px 90px 20px 10px;
+            @include laptop{
+                padding-right: 3%;
+            }
             &_toggle{
                 @include ipad{
                     position: fixed;
@@ -455,6 +460,7 @@ html{
                     background: $green;
                     &.active{
                         left: -70px;
+                        z-index: 2;
                     }
                     .aside-menu{
                         overflow-y: auto;
@@ -465,6 +471,7 @@ html{
                 @include iphone{
                     &.active{
                         left: -45px;
+                        z-index: 2;
                     }
                 }
             }
@@ -475,6 +482,9 @@ html{
         border-bottom: 5px solid #ecebe4;
         &:first-child{
             padding-top: 0;
+        }
+        &:last-child{
+            margin-bottom: 25%;
         }
        &__title{
             margin: 0;
@@ -570,11 +580,13 @@ html{
     }
 }
 .form-contact_w:before{
-    background: url('../img/bg_works.jpg') center / cover fixed;
+    background: url('../img/bg_works.jpg') center / cover ;
+    background-size: initial;
+    background-position: -365px -365px;
 }
 .speak{
     padding-top: 55px;
-    background: url('../img/bg_works.jpg') center 0/cover ;
+    background: url('../img/bg_works.jpg') center 0/cover no-repeat;
     @include desktop{
         padding-top: 75px;
     }
@@ -708,5 +720,19 @@ html{
         &__text{
             padding-left: 30px;
         }
+    }
+}
+#bg{
+    position: fixed;
+    overflow: hidden;
+    z-index: -1;
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(0, 0, 0, .5), transparent 50%, rgba(0, 0, 0, .5));
     }
 }

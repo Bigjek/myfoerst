@@ -8,7 +8,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="./assets/styles/main.min.css"><!--[if lt IE 9]>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
     <div class="wrapper">
@@ -52,7 +52,7 @@
               </div>
             </div>
             <div class="arrow-down arrow-down__btn_up">
-              <button class="arrow-down__btn">
+              <button class="arrow-down__btn" data-href="#section">
                 <svg class="icon" width="28" height="28">
                   <use xlink:href="assets/img/sprite.svg#arrow_down"> </use>
                 </svg>
@@ -60,7 +60,7 @@
             </div>
           </div>
         </section>
-        <section class="section work">
+        <section class="section work" id="section">
           <div class="triangle-box-lite">
             <svg class="traingle" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
               <polygon class="left" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
@@ -77,36 +77,82 @@
               <h1 class="block-title block-title_gray-h">Мои работы</h1>
             </div>
           </div>
-          <div class="work__block">
+          <div class="work__block slider">
             <div class="work__left">
-              <div class="site-school">
-                <div class="site-school__title">
-                  <h2 class="block-subtitle block-subtitle_gray">Сайт школы онлайн образования</h2>
-                </div>
-                <div class="site-school__description">HTML, CSS, JAVASCRIPT</div>
-                <div class="site-school__link"><a class="btn-link btn-link_green" href="#">
-                    <svg class="icon-white" width="20" height="20">
-                      <use xlink:href="assets/img/sprite.svg#link"></use>
-                    </svg><span class="site-school__text">Посмотреть сайт</span></a></div>
-              </div>
+              <div class="slider-inform"></div>
             </div>
             <div class="work__right">
               <div class="slider-list">
                 <ul class="slider-list__content">
-                  <li class="slider-list__item"><img class="slider-list__img" src="assets/img/other/slide.jpg" alt=""></li>
-                  <li class="slider-list__item"><img class="slider-list__img" src="assets/img/other/slide.jpg" alt=""></li>
-                  <li class="slider-list__item"><img class="slider-list__img" src="assets/img/other/slide.jpg" alt=""></li>
+                  <li class="slider-list__item active"><img class="slider-list__img" src="assets/img/other/slide1.jpg" alt="1">
+                    <div class="slider-desc">
+                      <div class="site-school">
+                        <div class="site-school__title">
+                          <h2 class="block-subtitle block-subtitle_gray">Сайт школы онлайн образования1</h2>
+                        </div>
+                        <div class="site-school__description">HTML, CSS, JAVASCRIPT</div>
+                        <div class="site-school__link"><a class="btn-link btn-link_green" href="#">
+                            <svg class="icon-white" width="20" height="20">
+                              <use xlink:href="assets/img/sprite.svg#link"></use>
+                            </svg><span class="site-school__text">Посмотреть сайт</span></a></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="slider-list__item"><img class="slider-list__img" src="assets/img/other/slide2.jpg" alt="2">
+                    <div class="slider-desc">
+                      <div class="site-school">
+                        <div class="site-school__title">
+                          <h2 class="block-subtitle block-subtitle_gray">Сайт школы онлайн образования2</h2>
+                        </div>
+                        <div class="site-school__description">HTML, CSS, JAVASCRIPT</div>
+                        <div class="site-school__link"><a class="btn-link btn-link_green" href="#">
+                            <svg class="icon-white" width="20" height="20">
+                              <use xlink:href="assets/img/sprite.svg#link"></use>
+                            </svg><span class="site-school__text">Посмотреть сайт</span></a></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="slider-list__item"><img class="slider-list__img" src="assets/img/other/slide3.jpg" alt="3">
+                    <div class="slider-desc">
+                      <div class="site-school">
+                        <div class="site-school__title">
+                          <h2 class="block-subtitle block-subtitle_gray">Сайт школы онлайн образования3</h2>
+                        </div>
+                        <div class="site-school__description">HTML, CSS, JAVASCRIPT</div>
+                        <div class="site-school__link"><a class="btn-link btn-link_green" href="#">
+                            <svg class="icon-white" width="20" height="20">
+                              <use xlink:href="assets/img/sprite.svg#link"></use>
+                            </svg><span class="site-school__text">Посмотреть сайт</span></a></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="slider-list__item"><img class="slider-list__img" src="assets/img/other/slide4.jpg" alt="4">
+                    <div class="slider-desc">
+                      <div class="site-school">
+                        <div class="site-school__title">
+                          <h2 class="block-subtitle block-subtitle_gray">Сайт школы онлайн образования4</h2>
+                        </div>
+                        <div class="site-school__description">HTML, CSS, JAVASCRIPT</div>
+                        <div class="site-school__link"><a class="btn-link btn-link_green" href="#">
+                            <svg class="icon-white" width="20" height="20">
+                              <use xlink:href="assets/img/sprite.svg#link"></use>
+                            </svg><span class="site-school__text">Посмотреть сайт</span></a></div>
+                      </div>
+                    </div>
+                  </li>
                 </ul>
               </div>
             </div>
             <div class="work__btn">
               <div class="slider-btn">
-                <button class="slider-btn__left">
+                <button class="slider-btn__control slider-btn__control_left">
+                  <div class="bg-left slider-list-mini"></div>
                   <svg class="icon" width="45" height="45">
                     <use xlink:href="assets/img/sprite.svg#portf_arrow_down"> </use>
                   </svg>
                 </button>
-                <button class="slider-btn__right">
+                <button class="slider-btn__control slider-btn__control_right">
+                  <div class="bg-right slider-list-mini"></div>
                   <svg class="icon" width="45" height="45">
                     <use xlink:href="assets/img/sprite.svg#portf_arrow_up"> </use>
                   </svg>
@@ -162,7 +208,7 @@
               </ul>
             </div>
             <div class="speak-center__form">
-              <form class="form-contact form-contact_w" action="">
+              <form class="form-contact form-contact_w" id="contact" action="">
                 <div class="form-contact__top">
                   <h2 class="block-subtitle block-subtitle_gray block-subtitle_f">Связяться со мной</h2>
                   <div class="input-group input-group__block">
@@ -193,6 +239,10 @@
             </div>
           </div>
         </section>
+        <div class="modal-success">
+          <div class="modal-success__text">Сообщение отправлено</div>
+          <button class="btn-modal btn-link_green" type="button">Закрыть </button>
+        </div>
       </div>
       <footer class="footer">
         <div class="footer__top">
@@ -251,6 +301,14 @@
         </div>
       </div>
     </div>
+    <div class="preloader">
+      <div class="preloader__spinner">
+        <div class="preloader__animation"></div>
+        <div class="preloader__percents">0%</div>
+      </div>
+    </div>
   </body>
-  <script src="./assets/scripts/main.js" defer></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="./assets/libs/js/jquery.min.js"><\/script>');</script>
+  <script src="./assets/scripts/main.js"></script>
 </html>

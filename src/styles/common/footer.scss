@@ -13,6 +13,9 @@
         @include laptop{
             padding: 25px 0 20px;
         }
+        @include ipad{
+            background: $gray-color;
+        }
         @include iphone{
             padding: 10px 0 0px;
             text-align: center;

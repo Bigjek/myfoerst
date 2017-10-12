@@ -14,11 +14,18 @@ html
     meta(content="ie=edge" http-equiv="x-ua-compatible")
     link(rel='stylesheet' href='./assets/styles/main.min.css')
     <!--[if lt IE 9]>
-    script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
     <![endif]-->
     
   body
     .wrapper
       block content
+    .preloader
+      .preloader__spinner
+        .preloader__animation
+        .preloader__percents 0%
+  script(src='//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+  script.
+    window.jQuery || document.write('<script src="./assets/libs/js/jquery.min.js"><\/script>');
   block script
-  script(src='./assets/scripts/main.js' defer)
+  script(src='./assets/scripts/main.js')

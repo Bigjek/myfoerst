@@ -32,6 +32,10 @@ const paths = {
         src: 'src/scripts/**/*.js',
         dest: 'build/assets/scripts/'
     },
+    libs: {
+        src: 'src/libs/**/*.*',
+        dest: 'build/assets/libs/'
+    },
     templates: {
         src: 'src/templates/**/*.pug',
         dest: 'build/assets/'
@@ -117,6 +121,12 @@ function fonts() {
         .pipe(gulp.dest(paths.fonts.dest));
 }
 
+// move libs
+function libs() {
+    return gulp.src(paths.libs.src)
+        .pipe(gulp.dest(paths.libs.dest));
+}
+
 // следим за src и запускаем таски
 function watch() {
     gulp.watch(paths.scripts.src, scripts);
@@ -124,6 +134,7 @@ function watch() {
     gulp.watch(paths.templates.src, templates);
     gulp.watch(paths.images.src, images);
     gulp.watch(paths.fonts.src, fonts);
+    gulp.watch(paths.libs.src, libs);
 }
 
 // следим за build и перезапускаем браузер
@@ -143,16 +154,17 @@ exports.images = images;
 exports.watch = watch;
 exports.server = server;
 exports.fonts = fonts;
+exports.libs = libs;
 
 // сборка и слежка
 gulp.task('default', gulp.series(
-    gulp.parallel(styles, scripts, templates, images, fonts),
+    gulp.parallel(styles, scripts, templates, images, fonts, libs),
     gulp.parallel(watch, server)
 ));
 
 gulp.task('build', gulp.series(
     clean,
-    gulp.parallel(styles, scripts, templates, images, fonts)
+    gulp.parallel(styles, scripts, templates, images, fonts, libs)
 ));
 
 gulp.task('sprite', function() {
