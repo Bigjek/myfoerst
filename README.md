@@ -9,3 +9,6 @@
 1. clone this repo
 2. npm i
 3. build 
+
+#### Как запустить с modgodb
+1. npm start
