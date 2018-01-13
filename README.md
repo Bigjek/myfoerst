@@ -8,4 +8,5 @@
 #### Как установить проект
 1. clone this repo
 2. npm i
+npm i gulp --save-dev
 3. build 

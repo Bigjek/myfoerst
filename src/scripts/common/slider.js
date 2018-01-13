@@ -3,7 +3,7 @@ const slider = (function() {
     flag = true,
     timer = 0,
     slider = $('.slider'),
-    durationTimer = 5000;
+    durationTimer = 6000;
         
   return {
     init: function() {
@@ -107,19 +107,23 @@ const slider = (function() {
     },
     autoPlay: function(){
       let thisElem = this;
+      this.start();
       timer = setInterval(function(){
-        let
-          elems = $('.slider-list__item'),
-          activeElem = elems.filter('.active'),
-          nextElem = activeElem.next(),
-          firstElem = elems.first();
-        
-        nextElem.length ? thisElem.move(nextElem, 'next') : thisElem.move(firstElem, 'next'); 
-        
-        thisElem.btnPlay();  
-
+        thisElem.start();
       }, durationTimer);
 
+    },
+    start: function(){
+      let thisElem = this;
+      let
+        elems = $('.slider-list__item'),
+        activeElem = elems.filter('.active'),
+        nextElem = activeElem.next(),
+        firstElem = elems.first();
+    
+      nextElem.length ? thisElem.move(nextElem, 'next') : thisElem.move(firstElem, 'next'); 
+    
+      thisElem.btnPlay();  
     },
     clearPlay: function(){
       if (timer) {
